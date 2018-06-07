@@ -1,4 +1,4 @@
 # Table of Contents
 
-* [Introduction](README.md)
-* [Chapter 1](_draft/chapter1.md)
+* [들어가며](_draft/ch00-prologue.md)
+* [Chapter 1](_draft/ch01.md)
