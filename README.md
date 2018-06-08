@@ -10,6 +10,6 @@
 
 본 작업은 [여기](http://blog.appkr.kr/work-n-play/pandoc-gitbook-%EC%A0%84%EC%9E%90%EC%B6%9C%ED%8C%90/)를 참조하였으며, 향후 여건이 되면 pandoc를 도입할 생각으로 동일한 문서 구조를 차용하였다.
 
-* [nodejs]](https://nodejs.org/en/): npm를 쓰기 위해서 필요
+* [nodejs](https://nodejs.org/en/): npm를 쓰기 위해서 필요
 * gitbook 설치: `npm install gitbook-cli -g`
   * gitbook은 현재(2018년 6월 현재) [https://legacy.gitbook.com](https://legacy.gitbook.com)으로 옮겨졌다. 새로운 gitbook.com은 설치형을 지원하지 않는 것으로 보인다.
