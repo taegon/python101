@@ -12,6 +12,8 @@
 
 gh-pages를 쓰기 위해서 [이 페이지](https://tech.ssut.me/2015/07/28/start-python-documentation-using-sphinx/)를 참조하였다.
 
+publish를 위해서는 [이 블로그]를 참조하였다.
+
 * [nodejs](https://nodejs.org/en/): npm를 쓰기 위해서 필요
 * gitbook 설치: `npm install gitbook-cli -g`
   * gitbook은 현재(2018년 6월 현재) [https://legacy.gitbook.com](https://legacy.gitbook.com)으로 옮겨졌다. 새로운 gitbook.com은 설치형을 지원하지 않는 것으로 보인다.
