@@ -24,6 +24,7 @@
 * TLDR
   * [PyCharm](https://www.jetbrains.com/pycharm/)를 설치하자.
   * 커뮤니티 버전 or 학생인증시 프로페셔널 버전
+  * 보다 상세한 설명을 원하면, "[박연오 저자의 <파이썬 프로그래밍 입문서 (가제)>의 1장 2절](https://python.bakyeono.net/chapter-1-2.html)"를 참조
 
 IDE라 함은 통합 개발 환경(Integrated Development Environment)라 하여, 개발에 필요한 여러가지 도구를 모아둔 환경을 의미한다. 기본적으로 코딩을 위해서는 메모장만 있어도 되지만, 코드를 읽기 쉽게 꾸며주거나, 오류를 찾고, 작성한 코드를 실행하는 작업을 하나의 통합된 툴로 제공해주는 소프트웨어가 다수 존재한다. 파이썬을 위한 IDE로 현재 가장 널리 쓰이고 있는 소프트웨어는 젯브레인의 PyCharm이다. [이곳](https://www.jetbrains.com/pycharm/)에서 다운 받을 수 있으며, 커뮤니티 버전으로 충분하나, 학교 이메일로 학생인증을 하면 무료로 프로페셔널 버전도 이용가능하다.
 
