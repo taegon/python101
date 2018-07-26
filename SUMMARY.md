@@ -6,3 +6,4 @@
 * [3장 기본기 다지기](_draft/ch03-syntax.md)
 * [4장 파일 읽기](_draft/ch04-read-file.md)
 * [5장 파일 쓰기](_draft/ch05-write-file.md)
+* [6장 여러 파일 다루기](_draft/ch06-handling-files.md)
