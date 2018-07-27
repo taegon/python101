@@ -23,6 +23,8 @@ dataset = []
 
 with open(filename, "r") as f:
     for line in f:
+        if not line.split():
+            continue
         tokens = line.split()
         year = int(tokens[0])
         month = int(tokens[1])
@@ -49,6 +51,8 @@ dataset = []
 
 with open(filename, "r") as f:
     for line in f:
+        if not line.split():
+            continue
         tokens = line.split()
         year = int(tokens[0])
         month = int(tokens[1])
@@ -83,6 +87,8 @@ for station_id in station_ids:
 
     with open(filename, "r") as f:
         for line in f:
+            if not line.split():
+                continue
             tokens = line.split()
             year = int(tokens[0])
             month = int(tokens[1])
