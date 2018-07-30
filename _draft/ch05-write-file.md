@@ -51,7 +51,7 @@ with open("90_copy.txt", "w") as f:
         f.write(line)
 
 total_line = len(data_year)
-with open("90_simple_tavg.csv", "r") as f:
+with open("90_simple_tavg.csv", "w") as f:
     f.write("year, temp_avg\n")
     for i in range(total_line):
         f.write("{}, {:.1f}\n".format(data_year[i], data_tavg[i]))
