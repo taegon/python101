@@ -7,3 +7,4 @@
 * [4장 파일 읽기](_draft/ch04-read-file.md)
 * [5장 파일 쓰기](_draft/ch05-write-file.md)
 * [6장 여러 파일 다루기](_draft/ch06-handling-files.md)
+* [7장 함수: 프로그램 조각내기](_draft/ch07-function.md)
