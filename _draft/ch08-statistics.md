@@ -66,6 +66,8 @@ def get_annual_prec(dataset):
     for data in dataset:
         year = data[0]
         idx = year - start_year
+        if idx < 0:
+            continue
         annual_prec[idx] += data[3]
 
     return annual_prec
@@ -73,9 +75,46 @@ def get_annual_prec(dataset):
 
 결과는 `print()`를 이용해서 값을 확인할 수 있다. `annual_prec`에는 1970년부터 2017년까지 총 48개의 연평균 기온이 저장되어 있다. 만약 측후소의 관측기간이 이보다 짧거나 데이터가 누락되었다면, 해당 연도는 0으로 기록될 것이다.
 
-여기서, 두 가지 새로운 문법이 등장한다. 먼저 `[0 for i in range(start_year, end_year + 1)]`
+여기서, 두 가지 새로운 문법이 등장한다. 먼저 `[0 for i in range(start_year, end_year + 1)]`은 다음과 같이 읽을 수 있다. 오른쪽부터 읽으면 된다 (영어와 한글 차이). `range`, 범위를 뜻하는데, `start_year` 이상 `end_year+1` 미만인 정수 리스트를 만들어준다. 즉 `i`에는 1970부터 2017까지 48개의 값이 반복해서 들어가게 되며, 이 `i`를 이용하여 계산할 수 있는데, 계산할 값은 항상 `0`이다. 결국 정리하면, 48개의 0를 채운 리스트를 만들게 된다.
 
-`+=` 연산은 누적을 뜻하는 연산으로 `a += 1`은 `a = a + 1`과 같은 의미로 컴퓨터가 이해한다.
+두번째로 `+=` 연산은 누적을 뜻하는 연산으로 `a += 1`은 `a = a + 1`과 같은 의미로 컴퓨터가 이해한다.
 
 데이터가 충분하다면(1970년 이전부터 관측 데이터가 있고, 2017년 이후까지 데이터가 있다면) 위 코드는 별 문제 없이 구동될 것이다. 하지만, 측후소마다 관측 시작 연도가 다를 경우에는 `start_year`와 `end_year`를 바꿀 수도 있겠다.
 
+## 연별 기본 통계 구하기
+
+파이썬으로 검색하다보면 가장 많이 눈에 띄는 패키지 중 하나가 "pandas"와 "numpy"이다. 각각 자료처리와 수치해석에 특화된 패키지인데, 이 둘을 아주 잘 쓸 수 있다면, 파이썬을 매우 효율적으로 쓸 수 있다. 이번 장에서 최댓값, 최솟값, 평균, 분산, 십분위 값을 구하게 될텐데, 간단하게 최댓값, 최솟값, 평균은 직접 구현해보고, 다른 통계치는 numpy를 이용하도록 하겠다.
+
+```python
+def print_stat(annual_dataset):
+    annual_avg = 0
+    annual_max = -999
+    annual_min = 9999
+    for data in annual_dataset:
+        annual_avg += data
+        if annual_max < data:
+            annual_max = data
+        annual_min = min(annual_min, data)
+
+    annual_avg = annual_avg / len(annual_dataset)
+
+    print("Avg {}".format(annual_avg))
+    print("Max {}".format(annual_max))
+    print("Min {}".format(annual_min))
+```
+
+```python
+import numpy as np
+
+def print_stat(annual_dataset):
+    print("Avg {}".format(np.mean(annual_dataset)))
+    print("Max {}".format(np.max(annual_dataset)))
+    print("Min {}".format(np.min(annual_dataset)))
+    print("Var {}".format(np.var(annual_dataset)))
+
+    print("Per10 {}".format(np.percentile(annual_dataset, 10)))
+    print("Per25 {}".format(np.percentile(annual_dataset, 25)))
+    print("Per50 {}".format(np.percentile(annual_dataset, 50)))
+    print("Per75 {}".format(np.percentile(annual_dataset, 75)))
+    print("Per90 {}".format(np.percentile(annual_dataset, 90)))
+```
