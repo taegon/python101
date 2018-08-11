@@ -98,3 +98,19 @@ def print_month_table_data(dataset):
 ```
 
 형식을 잡기 위해서 코드가 다소 복잡해 보이긴 하다. 하지만, 하나씩 고쳐가면서 살펴보면 그렇게 어렵진 않을 것이다. `print` 함수를 쓸 때 `end=""`를 쓰고 있는데, 이걸 쓰지 않으면 `print`문이 호출될때마다 줄바꿈이 되기 때문에 줄바꿈을 방지하기 위하여 추가해주는 코드이다.
+
+## 월별 통계자료
+
+테이블 형태로 출력하는 방식에 대해서 알아보았고, 기초 통계는 8장에서 알아보았다. 이 둘 코드를 잘 조합하여 마지막 작업을 수행하면 되는데, 한가지 난관은 연도별로 자료를 모았듯이 월별 자료, 즉 1월 통계를 위해서는 1월 자료만 다 모아주어야 한다. 이 부분만 해결하면 앞서 작성한 코드를 활용하여 쉽게 구현할 수 있을 것이다. 평균에 대해서만 코드를 제공할테니, 나머지 통계치는 각자 추가해보자.
+
+```python
+def print_stat(dataset):
+    print("{:10}".format("Avg"), end="")
+    for j in range(12):
+        month_data = []
+        for i in range(total_years):
+            idx = i * 12 + j
+            month_data.append(dataset[idx])
+        print("{:8.1f}".format(np.mean(month_data)), end="")
+    print()
+```
