@@ -9,4 +9,4 @@
 * [6장 여러 파일 다루기](_draft/ch06-handling-files.md)
 * [7장 함수: 프로그램 조각내기](_draft/ch07-function.md)
 * [8장 연도별 통계](_draft/ch08-statistics.md)
-* [8장 월별 통계](_draft/ch09-monthly-statistics.md)
+* [9장 월별 통계](_draft/ch09-monthly-statistics.md)
