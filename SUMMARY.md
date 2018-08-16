@@ -10,3 +10,4 @@
 * [7장 함수: 프로그램 조각내기](_draft/ch07-function.md)
 * [8장 연도별 통계](_draft/ch08-statistics.md)
 * [9장 월별 통계](_draft/ch09-monthly-statistics.md)
+* [10장 GIS용 자료만들기](_draft/ch10-GIS-table.md)
