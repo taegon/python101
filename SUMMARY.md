@@ -11,3 +11,4 @@
 * [8장 연도별 통계](_draft/ch08-statistics.md)
 * [9장 월별 통계](_draft/ch09-monthly-statistics.md)
 * [10장 GIS용 자료만들기](_draft/ch10-GIS-table.md)
+* [부록A. 모든 측후소 자료 받기](_draft/ch80-download-weather.md)
