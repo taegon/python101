@@ -12,11 +12,11 @@
 
 측후소 119번 (수원)의 2011년부터 2015년까지의 기상 자료를 확인해보자. 브라우저를 열고 아래 주소를 쓰면 된다.
 
-`http://api.taegon.kr:5002/station/119/?sy=2011&ey=2015&format=html`
+`https://api.taegon.kr/station/119/?sy=2011&ey=2015&format=html`
 
 자 그러면, 2014년부터 최근 날짜까지 기상자료를 구하려면 어떻게 해야할까?
 
-`http://api.taegon.kr:5002/station/119/?sy=2014&ey=2018&format=html`
+`https://api.taegon.kr/station/119/?sy=2014&ey=2018&format=html`
 
 무엇을 바꾸었는지 눈치챘는가? 측후소 번호(`119`)와 시작연도(`sy=2014`), 끝연도(`ey=2018`)만 원하는대로 바꿔주면 된다.
 
@@ -42,7 +42,7 @@ def main():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    url = 'http://api.taegon.kr:5002/stations/{}/?sy=2014&ey=2018&format=csv'
+    url = 'https://api.taegon.kr/stations/{}/?sy=2014&ey=2018&format=csv'
     for st_id in station_ids:
         download_url = url.format(st_id)
         r = requests.get(download_url)
