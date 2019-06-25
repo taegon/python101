@@ -1,1 +1,1 @@
-gitbook serve
+cmd /C gitbook serve ./posts
