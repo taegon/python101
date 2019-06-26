@@ -22,8 +22,8 @@
 
 캡틴판교님은 자동생성된 배포할 디렉토리에 `git init`를 이용하여 깃 저장소를 초기화하고, 이 저장소를 GitHub에 강제로 푸시하는 방식으로 사용하고 있었다. `gh-pages` 브랜치를 항상 초기화해서, 배포 이력(일시)가 남지 않는 부분이 살짝 아쉬운데, `master` 브랜치에 이력이 고스란히 남아있으므로, 무시하기로 하였다.
 
-[`vuepress`](https://github.com/joshua1988/learning-note)를 이용하니, 산출물이 더 나아보이기도 하였는데, 검색기능이 아쉬워서 일단은 gitbook을 유지 하기로 결심하였다.
+[`vuepress`](https://github.com/joshua1988/learning-note)를 이용하니, 산출물([`demo`](https://joshua1988.github.io/learning-note/))이 더 나아보이기도 하였는데, 검색기능이 아쉬워서 일단은 gitbook을 유지 하기로 결심하였다. `vuepress`는 기본적으로 `h2`, `h3` 태그만 검색이 되고, 본문 검색을 위해서는 Algolia Search를 이용하여야 한다. 또 다른 작업이 될 것 같아서, 기본적으로 검색 기능이 제공되는 gitbook를 유지하였다.
 
-* [nodejs](https://nodejs.org/en/): npm를 쓰기 위해서 필요
+* [Node.js](https://nodejs.org/en/): npm를 쓰기 위해서 필요
 * gitbook 설치: `npm install gitbook-cli -g`
   * gitbook은 현재(2018년 6월 현재) [https://legacy.gitbook.com](https://legacy.gitbook.com)으로 옮겨졌다. 새로운 gitbook.com은 설치형을 지원하지 않는 것으로 보인다.
