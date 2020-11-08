@@ -1,0 +1,463 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4장 파일 읽기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch05-write-file.html" />
+    
+    
+    <link rel="prev" href="ch03-syntax.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch00-prologue.html">
+            
+                <a href="ch00-prologue.html">
+            
+                    
+                    들어가며
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch01-setup.html">
+            
+                <a href="ch01-setup.html">
+            
+                    
+                    1장 파이썬 환경 구축하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch02-hello-world.html">
+            
+                <a href="ch02-hello-world.html">
+            
+                    
+                    2장 Hello, World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch03-syntax.html">
+            
+                <a href="ch03-syntax.html">
+            
+                    
+                    3장 기본기 다지기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="ch04-read-file.html">
+            
+                <a href="ch04-read-file.html">
+            
+                    
+                    4장 파일 읽기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch05-write-file.html">
+            
+                <a href="ch05-write-file.html">
+            
+                    
+                    5장 파일 쓰기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch06-handling-files.html">
+            
+                <a href="ch06-handling-files.html">
+            
+                    
+                    6장 여러 파일 다루기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch07-function.html">
+            
+                <a href="ch07-function.html">
+            
+                    
+                    7장 함수: 프로그램 조각내기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch08-statistics.html">
+            
+                <a href="ch08-statistics.html">
+            
+                    
+                    8장 연도별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch09-monthly-statistics.html">
+            
+                <a href="ch09-monthly-statistics.html">
+            
+                    
+                    9장 월별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch10-GIS-table.html">
+            
+                <a href="ch10-GIS-table.html">
+            
+                    
+                    10장 GIS용 자료만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch80-download-weather.html">
+            
+                <a href="ch80-download-weather.html">
+            
+                    
+                    부록A. 모든 측후소 자료 받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >4장 파일 읽기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xD30C;&#xC77C;-&#xC77D;&#xAE30;">&#xD30C;&#xC77C; &#xC77D;&#xAE30;</h1>
+<p>&#xC774;&#xBC88; &#xC7A5;&#xC5D0;&#xC11C;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC791;&#xC5C5;&#xC744; &#xCF54;&#xB4DC;&#xB85C; &#xC791;&#xC131;&#xD558;&#xACA0;&#xB2E4;.</p>
+<ol>
+<li>&#xAE30;&#xC0C1;&#xAD00;&#xCE21;&#xC790;&#xB8CC; (90.txt) &#xC77D;&#xC5B4;&#xC624;&#xAE30;.</li>
+<li>&#xBCC0;&#xC218;&#xC5D0; &#xAC12; &#xD560;&#xB2F9;&#xD558;&#xAE30;</li>
+<li><code>format</code> &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC77D;&#xC5B4;&#xC628; &#xAC12; &#xCD94;&#xB824;&#xC11C; &#xCD9C;&#xB825;&#xD558;&#xAE30;.</li>
+</ol>
+<h2 id="&#xC790;&#xB8CC;-&#xC900;&#xBE44;">&#xC790;&#xB8CC; &#xC900;&#xBE44;</h2>
+<p>&#xC608;&#xC81C;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xB370;&#xC774;&#xD130;&#xB294; &#xC544;&#xB798; &#xB9C1;&#xD06C;&#xB97C; &#xD1B5;&#xD574; &#xB2E4;&#xC6B4;&#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;. &#xAE43;&#xBD81; &#xD2B9;&#xC131;&#xC0C1; &#xD074;&#xB9AD;&#xC73C;&#xB85C;&#xB294; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xAC00; &#xC798; &#xC548;&#xB418;&#xB294; &#xAC83; &#xAC19;&#xB2E4;. &#xC544;&#xB798; &#xB9C1;&#xD06C;&#xC5D0; &#xB9C8;&#xC6B0;&#xC2A4; &#xC624;&#xB978;&#xCABD; &#xBC84;&#xD2BC;&#xC744; &#xD074;&#xB9AD;&#xD574;&#xC11C; &quot;&#xB2E4;&#xB978; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xB9C1;&#xD06C; &#xC800;&#xC7A5;&quot;&#xC744; &#xB204;&#xB974;&#xBA74; &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC6B4;&#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;.</p>
+<ul>
+<li><a href="data/90.txt">90.txt</a></li>
+</ul>
+<p>&#xD30C;&#xC77C;&#xBA85;&#xACFC; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xAD6C;&#xC870;&#xB97C; &#xC815;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xC740; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38;&#xAC00; &#xB290;&#xB07C;&#xB294; &#xAC00;&#xC7A5; &#xC5B4;&#xB824;&#xC6B4; &#xBD80;&#xBD84; &#xC911; &#xD558;&#xB098;&#xC778;&#xB370;, &#xB2E4;&#xC6B4; &#xBC1B;&#xC740; &#xD30C;&#xC77C;&#xC740; <code>data</code> &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xB123;&#xACE0;, &#xD30C;&#xC774;&#xC36C; &#xCF54;&#xB4DC;&#xB294; <code>python101</code>&#xC774;&#xB77C;&#xB294; &#xD3F4;&#xB354;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; <code>read_file.py</code>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xC800;&#xC7A5;&#xD55C; &#xAC83;&#xC73C;&#xB85C; &#xAC00;&#xC815;&#xD558;&#xACA0;&#xB2E4;.</p>
+<p>&#xD3B8;&#xC758;&#xC0C1; &#xC608;&#xC2DC;&#xB97C; &#xC774;&#xB807;&#xAC8C; &#xB4E4;&#xC5C8;&#xC744; &#xBFD0;, &#xD30C;&#xC77C;&#xBA85;&#xC774;&#xB098; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xBA85;, &#xD639;&#xC740; &#xD30C;&#xC77C; &#xC704;&#xCE58; &#xB4F1;&#xC740; &#xAC01;&#xC790;&#xAC00; &#xB9C8;&#xC74C;&#xB300;&#xB85C; &#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>PyCharm&#xC5D0;&#xC11C; &#xBE48; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xD558;&#xB098; &#xB9CC;&#xB4E4;&#xC5C8;&#xACE0;, &#xADF8; &#xC548;&#xC5D0;&#xB294; <code>data</code>&#xC640; <code>python101</code>&#xC774;&#xB77C;&#xB294; 2&#xAC1C;&#xC758; &#xD3F4;&#xB354;&#xAC00; &#xC788;&#xAC8C; &#xB41C;&#xB2E4;. <code>data</code> &#xD3F4;&#xB354;&#xC5D0;&#xB294; &#xBC29;&#xAE08; &#xB0B4;&#xB824;&#xBC1B;&#xC740; <code>90.txt</code> &#xD30C;&#xC77C;&#xC744; &#xB123;&#xC5B4;&#xB450;&#xC5C8;&#xACE0;, <code>python101</code> &#xD3F4;&#xB354;&#xC5D0;&#xB294; <code>read_file.py</code>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xBCF8; &#xC7A5;&#xC5D0;&#xC11C; &#xC791;&#xC131;&#xD560; &#xD30C;&#xC774;&#xC36C; &#xCF54;&#xB4DC;&#xB97C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB2E4;. &#xC774;&#xC81C; <code>read_file.py</code>&#xB77C;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD574; &#xBCF4;&#xC790;.</p>
+<h2 id="&#xBCC0;&#xC218;">&#xBCC0;&#xC218;</h2>
+<p>&#xBCC0;&#xC218;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0;&#xC11C; &#xAC12;&#xC744; &#xC800;&#xC7A5;&#xD574;&#xB450;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC9C0;&#xC815;&#xD574;&#xB193;&#xC740; &#xD2B9;&#xC815;&#xD55C; &#xC774;&#xB984;&#xB4E4;&#xC744; &#xC774;&#xC57C;&#xAE30;&#xD55C;&#xB2E4;.</p>
+<p>&#xC5D1;&#xC140;&#xC744; &#xC0DD;&#xAC01;&#xD574;&#xBCF4;&#xBA74; &#xC26C;&#xC6B4;&#xB370;, &#xC5D1;&#xC140;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xACC4;&#xC0B0;&#xC744; &#xD560; &#xB54C; &#xC6B0;&#xB9AC;&#xB294; &#xC140;&#xCC38;&#xC870;&#xB97C; &#xC774;&#xC6A9;&#xD55C;&#xB2E4;. &#xBCC0;&#xC758; &#xAE38;&#xC774;&#xAC00; <code>5</code>&#xC778; &#xC0AC;&#xAC01;&#xD615;&#xC758; &#xBA74;&#xC801;&#xC744; &#xAD6C;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; <code>=5*5</code>&#xB77C;&#xACE0; &#xC140; &#xC218;&#xC2DD;&#xC744; &#xC4F8; &#xC218;&#xB3C4; &#xC788;&#xC9C0;&#xB9CC;, <code>C1</code> &#xC140;&#xC5D0; <code>5</code>&#xB97C; &#xC4F0;&#xACE0;, <code>=C1*C1</code>&#xC774;&#xB77C;&#xACE0; &#xC140; &#xCC38;&#xC870;&#xB97C; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. &#xC140; &#xCC38;&#xC870;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74;, &#xB2E4;&#xB978; &#xAE38;&#xC774;&#xC758; &#xC0AC;&#xAC01;&#xD615;&#xC758; &#xBA74;&#xC801;&#xC744; &#xC27D;&#xAC8C; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xB2E4;. <code>C1</code>&#xC140;&#xC5D0; &#xB123;&#xC740; &#xC22B;&#xC790; <code>5</code> &#xB300;&#xC2E0; &#xB2E4;&#xB978; &#xAC12;&#xC744; &#xC368;&#xC8FC;&#xAE30;&#xB9CC; &#xD558;&#xBA74;&#xB41C;&#xB2E4;. &#xACC4;&#xC0B0;&#xC2DD;&#xC774; &#xBCF5;&#xC7A1;&#xD574;&#xC9C0;&#xBA74; &#xC140;&#xCC38;&#xC870;&#xB97C; &#xC4F0;&#xB294;&#xAC83;&#xACFC; &#xC218;&#xC2DD;&#xC5D0; &#xC9C1;&#xC811; &#xC22B;&#xC790;&#xB97C; &#xC785;&#xB825;&#xD558;&#xB294; &#xAC83; &#xCC28;&#xC774;&#xC758; &#xD65C;&#xC6A9;&#xC131;&#xC740; &#xADF9;&#xBA85;&#xD558;&#xAC8C; &#xAC08;&#xB9AC;&#xAC8C; &#xB41C;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xC140; &#xC774;&#xB984;&#xC774; &quot;&#xBCC0;&#xC218;&quot;&#xC774;&#xB2E4;.</p>
+<h2 id="&#xD30C;&#xC77C;-&#xC5F4;&#xACE0;-&#xC77D;&#xAE30;">&#xD30C;&#xC77C; &#xC5F4;&#xACE0;, &#xC77D;&#xAE30;</h2>
+<p>&#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xC11C; &#xD30C;&#xC77C;&#xC744; &#xC77D;&#xB294; &#xACFC;&#xC815;&#xC740; &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xC640; &#xAC19;&#xC774; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-python">filename = <span class="hljs-string">&quot;../data/90.txt&quot;</span>
+
+<span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f:
+        print(line)
+</code></pre>
+<p><code>filename</code>&#xC774;&#xB77C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xC785;&#xB825; &#xD30C;&#xC77C;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xACE0;, <code>with</code>&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xBB38;&#xC7A5;&#xC5D0;&#xC11C; &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xC900;&#xB2E4;. &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xBA74;, &#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xD30C;&#xC77C;&#xC744; &#xBA54;&#xBAA8;&#xB9AC; &#xACF5;&#xAC04;&#xC73C;&#xB85C; &#xC62E;&#xACA8;&#xC62C; &#xC900;&#xBE44;&#xB97C; &#xD558;&#xAC8C; &#xB41C;&#xB2E4;. &#xD30C;&#xC77C;&#xC744; &#xC77D;&#xAC70;&#xB098; &#xC4F0;&#xB294; &#xC791;&#xC5C5;&#xC774; &#xB05D;&#xB098;&#xBA74;, &#xB354; &#xC774;&#xC0C1; &#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC744; &#xC4F0;&#xC9C0; &#xC54A;&#xC74C;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xACE0;, &#xBA54;&#xBAA8;&#xB9AC;&#xC640; &#xB514;&#xC2A4;&#xD06C; &#xC0AC;&#xC774;&#xC5D0; &#xC5F0;&#xACB0;&#xB41C; &#xACE0;&#xB9AC;&#xB97C; &#xB04A;&#xC5B4;&#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;. &#xBCF4;&#xD1B5; <code>close()</code>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC758; &#xD568;&#xC218;&#xAC00; &#xADF8;&#xB7F0; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294;&#xB370;, &#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xC11C;&#xB294; <code>with</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC704;&#xC640; &#xAC19;&#xC774; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xBA74; <code>with</code> &#xBE14;&#xB85D;&#xC774; &#xB05D;&#xB098;&#xB294; &#xC2DC;&#xC810;&#xC5D0; &#xC790;&#xB3D9;&#xC73C;&#xB85C; <code>close()</code>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xC5EC;, &#xD30C;&#xC77C;&#xC744; &#xB2EB;&#xC544;&#xC900;&#xB2E4;.</p>
+<p>&#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xC11C; <code>f</code>&#xB77C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xD560;&#xB2F9;&#xD574;&#xC8FC;&#xC5C8;&#xACE0;, <code>for</code>&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xBB38;&#xC7A5;&#xC5D0;&#xC11C; &#xD30C;&#xC77C;&#xC744; &#xD55C;&#xC904;&#xC529; &#xC77D;&#xC5B4;&#xC11C; <code>line</code>&#xC774;&#xB77C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;&#xD574;&#xC8FC;&#xAC8C; &#xB41C;&#xB2E4;. &#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xB294; &#xC774;&#xB7EC;&#xD55C; &#xACFC;&#xC815;&#xC774; &#xB9E4;&#xC6B0; &#xAC04;&#xB2E8;&#xD788; &#xAE30;&#xC220;&#xD560; &#xC218; &#xC788;&#xB294;&#xB370;, c &#xC5B8;&#xC5B4;&#xC5D0;&#xC11C;&#xB294; &#xC774; &#xACFC;&#xC815;&#xC774; &#xB2E4;&#xC18C; &#xBCF5;&#xC7A1;&#xD558;&#xB2E4;. &#xAD50;&#xC218;&#xB2D8; &#xCF54;&#xB4DC;&#xAC00; &#xAE34; &#xC774;&#xC720;&#xC774;&#xB2E4;.</p>
+<p>&#xD30C;&#xC77C;&#xC744; &#xC81C;&#xB300;&#xB85C; &#xC77D;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xAE30; &#xC704;&#xD558;&#xC5EC; <code>print</code>&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xC904;&#xC5D0;&#xC11C; &#xAC01; &#xC904;&#xC744; &#xCD9C;&#xB825;&#xD574;&#xBCF8;&#xB2E4;. &#xC2E4;&#xD589;&#xD574;&#xBCF4;&#xBA74;, &#xC544;&#xB798;&#xC5D0; &#xC77D;&#xC5B4;&#xC628; &#xAC12;&#xC774; &#xCD9C;&#xB825;&#xB428;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>&#xC5EC;&#xAE30;&#xC11C;, &#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &#xAC15;&#xC870;&#xD558;&#xC790;&#xBA74;, &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30;&#xAC00; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD558;&#xB2E4;. &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30; &#xB41C; &#xBD80;&#xBD84;&#xC774; &#xAC19;&#xC740; &#xBE14;&#xB85D;&#xC73C;&#xB85C; &#xBB36;&#xC774;&#xAC8C; &#xB41C;&#xB2E4;. &#xB2E4;&#xB978; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC5B8;&#xC5B4;&#xC5D0;&#xC11C; &#xB300;&#xAD04;&#xD638;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xBE14;&#xB85D;&#xC744; &#xAD6C;&#xBD84;&#xD558;&#xB294;&#xB370;, &#xD30C;&#xC774;&#xC36C;&#xC740; &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30;&#xB85C; &#xC774;&#xB97C; &#xB300;&#xCCB4; &#xD55C;&#xB2E4;.</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xC55E;&#xC73C;&#xB85C;&#xB3C4; &#xACC4;&#xC18D;&#xB418;&#xACA0;&#xC9C0;&#xB9CC;, &#xC81C;&#xC2DC;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xC808;&#xB300; &#xCE74;&#xD53C;&#xD574;&#xC11C; &#xBD99;&#xC774;&#xC9C0; &#xB9D0;&#xB77C;. &#xB208;&#xC73C;&#xB85C; &#xCF54;&#xB4DC;&#xB97C; &#xC77D;&#xACE0;, &#xC678;&#xC6B4; &#xB2E4;&#xC74C;, &#xC9C1;&#xC811; &#xD0C0;&#xC774;&#xD551;&#xC744; &#xD574;&#xBD10;&#xC57C;&#xD55C;&#xB2E4;. &#xADF8;&#xB798;&#xC57C; &#xBE68;&#xB9AC; &#xB294;&#xB2E4;. &#xCEF4;&#xD4E8;&#xD130;&#xB294; &#xC801;&#xB2F9;&#xD788; &#xD574;&#xC11C; &#xC54C;&#xC544;&#xB4E3;&#xB294; &#xBC95;&#xC774; &#xC5C6;&#xB2E4;. &#xAD49;&#xC7A5;&#xD788; &#xC5C4;&#xACA9;&#xD558;&#xAC8C; &#xBB38;&#xBC95;&#xC744; &#xC900;&#xC218;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xC0AC;&#xC18C;&#xD55C; &#xC624;&#xD0C0; &#xD55C; &#xAE00;&#xC790; &#xB54C;&#xBB38;&#xC5D0; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xC548; &#xB3CC;&#xC544;&#xAC00;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;. &#xADF8;&#xB7EC;&#xB2C8; &#xAF2D; &#xC9C1;&#xC811; &#xD0C0;&#xC774;&#xD551;&#xD574;&#xC11C; &#xC5F0;&#xC2B5;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xC790;.</p>
+<h3 id="&#xB354;-&#xC77D;&#xAE30;-&#xD30C;&#xC77C;-&#xACBD;&#xB85C;">&#xB354; &#xC77D;&#xAE30;: &#xD30C;&#xC77C; &#xACBD;&#xB85C;</h3>
+<p>&#xD30C;&#xC77C; &#xC785;&#xCD9C;&#xB825; &#xACFC;&#xC815;&#xC5D0;&#xC11C; &#xAC00;&#xC7A5; &#xD754;&#xD55C; &#xC2E4;&#xC218; &#xC911; &#xD558;&#xB098;&#xB294; &#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xC774;&#xB2E4;. &#xB2E4;&#xC2DC; &#xB9D0;&#xD574;, &#xD30C;&#xC77C;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC5D0;&#xAC8C; &#xC54C;&#xB824;&#xC8FC;&#xC5B4;&#xC57C; &#xD558;&#xB294;&#xB370;, &#xC774; &#xBD80;&#xBD84;&#xC5D0;&#xC11C; &#xC2E4;&#xC218;&#xD558;&#xAE30; &#xC27D;&#xB2E4;. &#xC704; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; <code>filename</code>&#xC774;&#xB77C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; <code>90.txt</code> &#xD30C;&#xC77C; &#xC704;&#xCE58;&#xB97C; &#xC54C;&#xB824;&#xC900;&#xB2E4;. <code>.</code>&#xB294; &#xD604;&#xC7AC; &#xD3F4;&#xB354;, <code>..</code> &#xB294; &#xC0C1;&#xC704; &#xD3F4;&#xB354;&#xB97C; &#xC758;&#xBBF8;&#xD558;&#xB294;&#xB370;, &#xD604;&#xC7AC; &#xCF54;&#xB4DC;&#xB294; <code>python101</code> &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC788;&#xACE0;, <code>90.txt</code> &#xD30C;&#xC77C;&#xC740; <code>data</code> &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB2E4;. PyCharm&#xC5D0;&#xC11C; &#xCF54;&#xB4DC;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74;, &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xBBC0;&#xB85C; &#xD574;&#xB2F9; &#xC704;&#xCE58;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC785;&#xB825;&#xD30C;&#xC77C; &#xC704;&#xCE58;&#xB97C; &#xC801;&#xC808;&#xD788; &#xB123;&#xC5B4;&#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xC55E;&#xC11C;&#xC640; &#xAC19;&#xC774; &#xACBD;&#xB85C;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC744; &#xC0C1;&#xB300; &#xACBD;&#xB85C;(relative path)&#xB77C;&#xACE0; &#xD55C;&#xB2E4;. &#xC0C1;&#xB300; &#xACBD;&#xB85C;&#xB294; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xAC00; &#xB9CE;&#xC544;&#xC9C0;&#xACE0;, &#xC704;&#xCE58;&#xAC00; &#xBCF5;&#xC7A1;&#xD574;&#xC9C0;&#xBA74; &#xADF8; &#xC0C1;&#xD558;&#xAD00;&#xACC4;&#xB97C; &#xC77C;&#xC77C;&#xC774; &#xB530;&#xB77C;&#xAC00;&#xAE30;&#xAC00; &#xC27D;&#xC9C0; &#xC54A;&#xB2E4;&#xB294; &#xB2E8;&#xC810;&#xC774; &#xC788;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; 3&#xB2E8;&#xACC4; &#xC0C1;&#xC704; &#xD3F4;&#xB354;&#xB85C; &#xC774;&#xB3D9;&#xD55C; &#xD6C4;, 4&#xB2E8;&#xACC4; &#xD3F4;&#xB354;&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xB824;&#xACE0; &#xD558;&#xBA74;, <code>../../../abc/sub/data/ver1/input.txt</code>&#xC640; &#xAC19;&#xC774; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xB2E4;&#xB978; &#xBC29;&#xC2DD;&#xC73C;&#xB85C;&#xB294; &#xC808;&#xB300; &#xACBD;&#xB85C;(absolute path)&#xB77C;&#xACE0; &#xD574;&#xC11C;, <code>c:/code/python101/data/90.txt</code>&#xC640; &#xAC19;&#xC774; &#xC804;&#xCCB4; &#xACBD;&#xB85C;&#xB97C; &#xC801;&#xC5B4;&#xC8FC;&#xB294; &#xBC29;&#xC2DD;&#xC774; &#xC788;&#xB2E4;. &#xC774; &#xBC29;&#xC2DD;&#xC740; &#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xB97C; &#xC9C1;&#xAD00;&#xC801;&#xC73C;&#xB85C; &#xC54C; &#xC218; &#xC788;&#xACE0;, &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xC5B4;&#xB290;&#xC704;&#xCE58;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xB4E0; &#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xC815;&#xD655;&#xD788; &#xCC3E;&#xC744; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xC624;&#xD574;&#xC758; &#xC18C;&#xC9C0;&#xAC00; &#xC801;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD560; &#xB54C;, &#xB2E8;&#xC21C;&#xD788; &#xC808;&#xB300;&#xACBD;&#xB85C; &#xC804;&#xCCB4;&#xB97C; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xC4F0;&#xC9C0;&#xB294; &#xC54A;&#xB294; &#xD3B8;&#xC774;&#xB2E4;. &#xADF8; &#xC774;&#xC720;&#xB294; &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xB97C; &#xB2E4;&#xB978; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC804;&#xB2EC;&#xD558;&#xC600;&#xC744; &#xB54C;, &#xACBD;&#xB85C;&#xB97C; &#xC218;&#xC815;&#xD574;&#xC8FC;&#xC5B4;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;. &#xC0AC;&#xC6A9;&#xC790;&#xB9C8;&#xB2E4; &#xB3D9;&#xC77C;&#xD55C; &#xACBD;&#xB85C;&#xB85C; &#xD30C;&#xC77C;&#xC744; &#xC800;&#xC7A5;&#xD55C;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xAE30;&#xC5D4; &#xBB34;&#xB9AC;&#xAC00; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
+<p>&#xADF8;&#xB798;&#xC11C; &#xB450; &#xAC1C;&#xB150;&#xC744; &#xC870;&#xD569;&#xD558;&#xC5EC;, &#xAE30;&#xC900; &#xACBD;&#xB85C;&#xB97C; &#xC808;&#xB300;&#xACBD;&#xB85C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xACE0;, &#xD574;&#xB2F9; &#xAE30;&#xC900; &#xACBD;&#xB85C;&#xB97C; &#xC911;&#xC2EC;&#xC73C;&#xB85C; &#xC0C1;&#xB300;&#xACBD;&#xB85C;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC774; &#xB110;&#xB9AC; &#xC774;&#xC6A9;&#xB41C;&#xB2E4;. &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC608;&#xC81C;&#xC5D0;&#xC11C;&#xB294; &#xD3B8;&#xC758;&#xC0C1; &#xC0C1;&#xB300; &#xACBD;&#xB85C;&#xB97C; &#xACC4;&#xC18D; &#xC4F0;&#xACA0;&#xB2E4;.</p>
+<pre><code class="lang-python">BASE_DIR = <span class="hljs-string">&quot;c:/code/python101/&quot;</span>
+filename = BASE_DIR + <span class="hljs-string">&quot;data/90.txt&quot;</span>
+</code></pre>
+<h2 id="&#xBCC0;&#xC218;&#xC5D0;-&#xD560;&#xB2F9;&#xD558;&#xACE0;-&#xCD9C;&#xB825;&#xD558;&#xAE30;">&#xBCC0;&#xC218;&#xC5D0; &#xD560;&#xB2F9;&#xD558;&#xACE0; &#xCD9C;&#xB825;&#xD558;&#xAE30;</h2>
+<p>&#xC77D;&#xC740; &#xC790;&#xB8CC;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294;, &#xAC12;&#xC744; &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xC774; &#xACFC;&#xC815;&#xC5D0;&#xC11C; &#xC801;&#xC808;&#xD55C; &#xD615;&#xD0DC;&#xC758; &#xC790;&#xB8CC;&#xD615;&#xD0DC;&#xB85C; &#xBC14;&#xAFB8;&#xC5B4;&#xC900;&#xB2E4;.</p>
+<pre><code class="lang-python">filename = <span class="hljs-string">&quot;../data/90.txt&quot;</span>
+
+<span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f:
+        tokens = line.split()
+        year = int(tokens[<span class="hljs-number">0</span>])
+        tavg = float(tokens[<span class="hljs-number">4</span>])
+        print(<span class="hljs-string">&quot;Year: {:d}, Temp_Avg: {:.1f}&quot;</span>.format(year, tavg))
+</code></pre>
+<p>&#xC55E;&#xC11C; &#xC608;&#xC81C;&#xC5D0;&#xC11C; &#xD655;&#xC778;&#xC744; &#xC704;&#xD574;&#xC11C; &#xC368;&#xB450;&#xC5C8;&#xB358; <code>print(line)</code> &#xCF54;&#xB4DC;&#xB97C; &#xC9C0;&#xC6B0;&#xACE0;, &#xC704; &#xCF54;&#xB4DC;&#xCC98;&#xB7FC; &#xBA87; &#xC904; &#xB354; &#xCD94;&#xAC00;&#xD558;&#xC600;&#xB2E4;. &#xCCAB;&#xBC88;&#xC9F8;&#xB294; <code>90.txt</code> &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xBCF4;&#xBA74;, &#xD55C;&#xC904;&#xC5D0; &#xC5EC;&#xB7EC;&#xAC1C;&#xC758; &#xC22B;&#xC790;&#xB4E4;&#xC774; &#xC788;&#xB294;&#xB370;, &#xC774; &#xC22B;&#xC790;&#xB97C; &#xD558;&#xB098;&#xC529; &#xB098;&#xB204;&#xC5B4;&#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;. &#xC5D1;&#xC140;&#xC5D0;&#xC11C; &#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC744; &#xCE74;&#xD53C;&#xD574;&#xC11C; &#xBD99;&#xC5EC;&#xBCF4;&#xBA74;, &#xC798; &#xB098;&#xB204;&#xC5B4;&#xC9C8; &#xB54C;&#xB3C4; &#xC788;&#xC9C0;&#xB9CC;, &#xD55C;&#xCE78;&#xC5D0; &#xD55C;&#xC904; &#xB0B4;&#xC6A9;&#xC774; &#xB2E4; &#xB4E4;&#xC5B4;&#xAC00; &#xC788;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;. &#xADF8;&#xB7EC;&#xBA74; <code>&#xB370;&#xC774;&#xD130; &gt; &#xD14D;&#xC2A4;&#xD2B8; &#xB098;&#xB204;&#xAE30;</code> &#xBA54;&#xB274;&#xB97C; &#xD1B5;&#xD574; &#xB098;&#xB204;&#xC5B4; &#xC900;&#xB2E4;. &#xC774; &#xAC19;&#xC740; &#xC791;&#xC5C5;&#xC774; <code>line.split()</code>&#xC774;&#xB77C;&#xB294; &#xBA85;&#xB839;&#xC774;&#xB2E4;.</p>
+<p>&#xC774;&#xB807;&#xAC8C; &#xB098;&#xB204;&#xC5B4;&#xC9C4; &#xAC12;&#xB4E4;&#xC740; <code>tokens</code>&#xB77C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;&#xC774; &#xB41C;&#xB2E4;. <code>print(tokens)</code>&#xB77C;&#xACE0; &#xC368;&#xC11C; &#xD574;&#xB2F9; &#xB0B4;&#xC6A9;&#xC744; &#xCD9C;&#xB825;&#xD574;&#xBCF4;&#xBA74;, &#xC5B4;&#xB5BB;&#xAC8C; &#xB098;&#xB204;&#xC5B4;&#xC9C0;&#xB294;&#xC9C0; &#xC774;&#xD574;&#xD560; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;. &#xC774;&#xB807;&#xAC8C; &#xB098;&#xB204;&#xB354;&#xB77C;&#xB3C4; &#xAC01; &#xAC12;&#xC740; &#xC5EC;&#xC804;&#xD788; &#xBB38;&#xC790;&#xC5F4;&#xC774;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, <code>&apos;2016&apos;</code>&#xC774;&#xB77C;&#xACE0; &#xD45C;&#xC2DC;&#xB420;&#xD150;&#xB370;, &#xC774;&#xB294; &#xBB38;&#xC790;&#xC5F4;&#xC774;&#xC9C0; &#xC22B;&#xC790;&#xAC00; &#xC544;&#xB2C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC22B;&#xC790;&#xB85C; &#xBC14;&#xAFB8;&#xC5B4; &#xC8FC;&#xAE30; &#xC704;&#xD558;&#xC5EC; &#xADF8; &#xB2E4;&#xC74C; 2&#xC904;&#xC744; &#xC791;&#xC131;&#xD558;&#xC600;&#xB2E4;. &#xB2E4;&#xB978; &#xBCC0;&#xC218;&#xAC00; &#xB354; &#xD544;&#xC694;&#xD558;&#xBA74;, &#xCD94;&#xAC00;&#xD558;&#xBA74;&#xB41C;&#xB2E4;. <code>token[0]</code>&#xACFC; &#xAC19;&#xC774; &#xC22B;&#xC790;&#xB294; &#xC704;&#xCE58;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294;&#xB370;, &#xCCAB;&#xBC88;&#xC9F8; &#xD56D;&#xBAA9;&#xC774; 0&#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xC810;&#xB9CC; &#xC8FC;&#xC758;&#xD558;&#xC790;. &#xB300;&#xBD80;&#xBD84;&#xC758; &#xC5B8;&#xC5B4;&#xB294; 0&#xBD80;&#xD130; &#xC138;&#xAE30; &#xC2DC;&#xC791;&#xD558;&#xC9C0;&#xB9CC;, &#xD3EC;&#xD2B8;&#xB780;&#xACFC; &#xBE44;&#xC8FC;&#xC5BC;&#xBCA0;&#xC774;&#xC9C1;&#xC740; 1&#xBD80;&#xD130; &#xC13C;&#xB2E4;. &#xBE44;&#xC8FC;&#xC5BC; &#xBCA0;&#xC774;&#xC9C1;&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; 0&#xBD80;&#xD130; &#xC138;&#xAE34;&#xD558;&#xC9C0;&#xB9CC;, &#xC5D1;&#xC140; VBA&#xB098; &#xB9CE;&#xC740; &#xC608;&#xC81C;&#xC5D0;&#xC11C; 1&#xBD80;&#xD130; &#xC13C;&#xB2E4;. 1&#xBD80;&#xD130; &#xC138;&#xB294; &#xC5B8;&#xC5B4;&#xB294; <a href="https://stackoverflow.com/questions/1499749/list-of-1-indexed-programming-languages" target="_blank">&#xB2E4;&#xC74C; &#xB9C1;&#xD06C;</a>&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC790;. &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC5B8;&#xC5B4;&#xB294; 0&#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD55C;&#xB2E4;&#xACE0; &#xC0DD;&#xAC01;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<p>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xCD9C;&#xB825; &#xBD80;&#xBD84;&#xC740; <code>%</code>&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; c&#xC5B8;&#xC5B4;&#xC758; <code>printf</code>&#xC640; &#xC720;&#xC0AC;&#xD558;&#xAC8C; &#xC791;&#xC131;&#xD55C; &#xC608;&#xC81C;&#xB97C; &#xB9CE;&#xC774; &#xBCF4;&#xC558;&#xC744;&#xD150;&#xB370;, &#xC55E;&#xC7A5;&#xC5D0;&#xC11C;&#xB3C4; &#xC81C;&#xC2DC;&#xD558;&#xC600;&#xC9C0;&#xB9CC;, <code>%</code> &#xC5F0;&#xC0B0;&#xC790;&#xBCF4;&#xB2E4;&#xB294; <code>format</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xCD94;&#xCC9C;&#xD55C;&#xB2E4;. &#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &quot;<a href="https://pyformat.info/" target="_blank">PyFormat: Using % and .format() for great good!</a>&quot; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC790;.</p>
+<p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; &#xD3C9;&#xADE0;&#xC628;&#xB3C4;&#xB9CC; &#xCD9C;&#xB825;&#xD558;&#xC9C0;&#xB9CC;, &#xAC15;&#xC218;&#xB7C9;&#xC774;&#xB098; &#xC2B5;&#xB3C4;&#xCC98;&#xB7FC; &#xB2E4;&#xB978; &#xAE30;&#xC0C1;&#xC790;&#xB8CC;&#xB85C; &#xCD9C;&#xB825;&#xD574;&#xBCF4;&#xAE38; &#xBC14;&#xB780;&#xB2E4;.</p>
+<h2 id="&#xB9C8;&#xC9C0;&#xB9C9;-&#xC904;&#xC5D0;-&#xBE48;&#xCE78;&#xC774;-&#xD3EC;&#xD568;&#xB41C;-&#xACBD;&#xC6B0;">&#xB9C8;&#xC9C0;&#xB9C9; &#xC904;&#xC5D0; &#xBE48;&#xCE78;&#xC774; &#xD3EC;&#xD568;&#xB41C; &#xACBD;&#xC6B0;</h2>
+<p>&#xD14D;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xC744; &#xCC98;&#xB9AC;&#xD558;&#xB2E4; &#xBCF4;&#xBA74;, &#xC2EC;&#xC2EC;&#xCC2E;&#xAC8C; &#xB9C8;&#xC9C0;&#xB9C9; &#xC904;&#xC5D0; &#xBE48;&#xC904;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xAE30; &#xB9C8;&#xB828;&#xC774;&#xB2E4;. &#xB300;&#xBD80;&#xBD84; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; &#xBE48;&#xC904;&#xC774; &#xC788;&#xB4E0; &#xC5C6;&#xB4E0; &#xD070; &#xC0C1;&#xAD00;&#xC774; &#xC5C6;&#xB294;&#xB370;, &#xC6B0;&#xB9AC;&#xAC00; &#xC55E;&#xC11C; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C;&#xB294; &#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;. &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC740; &#xC815;&#xD655;&#xD788; &#xC9C0;&#xC2DC;&#xD55C; &#xBC29;&#xC2DD;&#xB300;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xAC83;&#xC778;&#xB370;, &#xBE48; &#xC904;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5C8;&#xC744; &#xACBD;&#xC6B0; &#xD574;&#xB2F9; &#xC904;&#xC744; &#xCC98;&#xB9AC;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xB118;&#xAE30;&#xBA74; &#xAC04;&#xB2E8;&#xD788; &#xD574;&#xACB0;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC774;&#xB97C; &#xBC18;&#xC601;&#xD55C; &#xCF54;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<pre><code class="lang-python">filename = <span class="hljs-string">&quot;../data/90.txt&quot;</span>
+
+<span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> line.split():
+            <span class="hljs-keyword">continue</span>
+        tokens = line.split()
+        year = int(tokens[<span class="hljs-number">0</span>])
+        tavg = float(tokens[<span class="hljs-number">4</span>])
+        print(<span class="hljs-string">&quot;Year: {:d}, Temp_Avg: {:.1f}&quot;</span>.format(year, tavg))
+</code></pre>
+<h3 id="&#xB354;-&#xC77D;&#xAE30;-&#xC790;&#xB8CC;&#xD615;">&#xB354; &#xC77D;&#xAE30;: &#xC790;&#xB8CC;&#xD615;</h3>
+<p>&#xC790;&#xB8CC;&#xD615;&#xC740; &#xD06C;&#xAC8C; &#xBB38;&#xC790;&#xC5F4;, &#xC22B;&#xC790;, &#xB0A0;&#xC9DC;&#xB85C; &#xB098;&#xB20C; &#xC218; &#xC788;&#xB2E4;. &#xC6B0;&#xB9AC; &#xBD84;&#xC57C;&#xC5D0;&#xC11C; &#xB2E4;&#xB8E8;&#xB294; &#xD30C;&#xC77C;&#xC740; &#xB300;&#xBD80;&#xBD84; &#xC77C;&#xBC18;&#xD14D;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB300;&#xBD80;&#xBD84; &#xBB38;&#xC790;&#xC5F4;&#xB85C; &#xC800;&#xC7A5;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC218;&#xC2DD; &#xACC4;&#xC0B0;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC774; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xC22B;&#xC790;&#xB85C; &#xBC14;&#xAFB8;&#xC5B4;&#xC8FC;&#xC5B4;&#xC57C; &#xD558;&#xBA70;, &#xC22B;&#xC790;&#xB294; &#xD06C;&#xAC8C; &#xC815;&#xC218;&#xC640; &#xC2E4;&#xC218;&#xB85C; &#xB098;&#xB204;&#xC5B4;&#xC9C4;&#xB2E4;. &#xC774;&#xB294; &#xCEF4;&#xD4E8;&#xD130;&#xAC00; 0, 1&#xB85C; &#xAD6C;&#xC131;&#xB418;&#xB294; &#xC774;&#xC9C4;&#xC218;&#xB97C; &#xBC14;&#xD0D5;&#xC73C;&#xB85C; &#xC790;&#xB8CC;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xB3C4;&#xB85D; &#xC124;&#xACC4;&#xB418;&#xC5C8;&#xACE0;, &#xC81C;&#xD55C;&#xB41C; &#xBA54;&#xBAA8;&#xB9AC; &#xACF5;&#xAC04; &#xB0B4;&#xC5D0;&#xC11C; &#xD6A8;&#xC728;&#xC801;&#xC73C;&#xB85C; &#xACC4;&#xC0B0;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xC815;&#xC218;&#xC640; &#xC2E4;&#xC218;&#xB85C; &#xAD6C;&#xBD84;&#xD558;&#xAC8C; &#xB418;&#xC5C8;&#xB2E4;.</p>
+<p>&#xC815;&#xC218;&#xD615;&#xC740; <code>int()</code>&#xB77C;&#xB294; &#xD568;&#xC218;&#xB85C;, &#xC2E4;&#xC218;&#xD615;&#xC740; <code>float()</code>&#xC774;&#xB77C;&#xB294; &#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xBCC0;&#xD658;&#xD560; &#xC218; &#xC788;&#xB2E4;. <code>float</code>&#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xC744; &#xC4F0;&#xB294; &#xC774;&#xC720;&#xB294; &#xBD80;&#xB3D9;&#xC18C;&#xC218;&#xC810;, &#xC989; &#xB5A0; &#xB2E4;&#xB2C8;&#xB294; &#xC18C;&#xC218;&#xC810;&#xC774;&#xB77C;&#xB294; &#xAC1C;&#xB150;&#xC774;&#xB2E4;. &#xC790;&#xC138;&#xD55C; &#xAC74; &#xBD80;&#xB3D9;&#xC18C;&#xC218;&#xC810;&#xC73C;&#xB85C; &#xAC80;&#xC0C9;&#xD574;&#xBCF4;&#xAE30; &#xBC14;&#xB780;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; <code>double</code>&#xC774;&#xB77C;&#xB294; &#xD0A4;&#xC6CC;&#xB4DC;&#xB3C4; &#xB9CE;&#xC774; &#xC4F0;&#xB294;&#xB370;, &#xC774;&#xAC74; &#xBC30;&#xC815;&#xB3C4; &#xBD80;&#xB3D9;&#xC18C;&#xC218;&#xC810;, &#xC989; 2&#xBC30; &#xC815;&#xBC00;&#xD558;&#xB2E8; &#xB73B;&#xC774;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; <code>double</code>&#xC774;&#xB2E4;. 2&#xBC30; &#xC815;&#xBC00;&#xD558;&#xB2E8; &#xC758;&#xBBF8;&#xB3C4; &#xC57D;&#xAC04; &#xC624;&#xD574;&#xC758; &#xC18C;&#xC9C0;&#xAC00; &#xC788;&#xC9C0;&#xB9CC;, &#xC790;&#xC138;&#xD55C; &#xC124;&#xBA85;&#xC740; &#xC0DD;&#xB7B5;&#xD558;&#xACA0;&#xB2E4;.</p>
+<h2 id="&#xAE43;&#xD5C8;&#xBE0C;-&#xD65C;&#xC6A9;&#xD558;&#xAE30;">&#xAE43;&#xD5C8;&#xBE0C; &#xD65C;&#xC6A9;&#xD558;&#xAE30;</h2>
+<p>&#xAE43;&#xD5C8;&#xBE0C;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38; &#xD639;&#xC740; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xC774;&#xC5D0;&#xAC8C; &#xC720;&#xC6A9;&#xD55C; &#xD50C;&#xB7AB;&#xD3FC;&#xC774;&#xB2E4;. &#xBA87; &#xBC88;&#xC744; &#xAC15;&#xC870;&#xD574;&#xB3C4; &#xC9C0;&#xB098;&#xCE58;&#xC9C0; &#xC54A;&#xC744;&#xC815;&#xB3C4;&#xB85C; &#xD6CC;&#xB96D;&#xD55C; &#xC11C;&#xBE44;&#xC2A4;&#xC774;&#xB2E4;. &#xAE43;&#xD5C8;&#xBE0C;&#xB97C; &#xC775;&#xD788;&#xACE0; &#xB098;&#xBA74;, &#xC4F0;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xC5B4;&#xB835;&#xC9C0; &#xC54A;&#xC73C;&#xB098;, &#xC9C4;&#xC785;&#xC7A5;&#xBCBD;&#xC774; &#xB192;&#xC740; &#xAC83; &#xC5ED;&#xC2DC; &#xC0AC;&#xC2E4;&#xC774;&#xB2E4;. &#xC8FC;&#xBCC0;&#xC5D0; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xC0AC;&#xB78C;&#xC5C6;&#xC774; &#xC368;&#xBCF4;&#xB824;&#xACE0; &#xD558;&#xBA74;, &#xB9C9;&#xB9C9;&#xD558;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC774;&#xD574;&#xD55C;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xD55C;&#xBC88; &#xC775;&#xC219;&#xD574;&#xC9C0;&#xACE0; &#xB098;&#xBA74;, &#xC5B4;&#xB835;&#xC9C0; &#xC54A;&#xAC8C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xAC83; &#xC5ED;&#xC2DC; &#xC0AC;&#xC2E4;&#xC774;&#xB2E4;.</p>
+<p>&#xC624;&#xB298;&#xC740; &#xAE43;&#xD5D9;&#xC744; &#xBC14;&#xB85C; &#xBC30;&#xC6B0;&#xB77C;&#xACE0;&#xB294; &#xD558;&#xC9C0;&#xC54A;&#xACA0;&#xB2E4;. &#xB300;&#xC2E0; &#xD6E8;&#xC52C; &#xC27D;&#xAC8C; &#xC4F8; &#xC218; &#xC788;&#xB294; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC18C;&#xAC1C;&#xD558;&#xACE0;&#xC790; &#xD55C;&#xB2E4;. &#xAE43;&#xD5C8;&#xBE0C;&#xC758; &#xB610;&#xB2E4;&#xB978; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; gist&#xB77C;&#xB294; &#xAC78; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;. &#xB2F9;&#xC5F0;&#xD788; github.com &#xACC4;&#xC815;&#xC774; &#xC788;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<ul>
+<li><a href="https://gist.github.com" target="_blank">https://gist.github.com</a></li>
+</ul>
+<p>&#xAD49;&#xC7A5;&#xD788; &#xC27D;&#xB2E4;. &#xADF8;&#xB0E5; &#xCF54;&#xB4DC;&#xB97C; &#xAC16;&#xB2E4; &#xBD99;&#xC774;&#xBA74; &#xB41C;&#xB2E4;. &#xC81C;&#xC77C; &#xC704;&#xC5D0;&#xB294; &#xD574;&#xB2F9; gist&#xC758; &#xC124;&#xBA85;&#xC744; &#xC801;&#xC73C;&#xBA74; &#xB418;&#xACE0;, &#xD558;&#xB098;&#xC758; gist&#xC5D0;&#xB294; &#xC5EC;&#xB7EC;&#xAC1C;&#xC758; &#xD30C;&#xC77C;&#xC744; &#xD3EC;&#xD568;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xCC98;&#xC74C; &#xCEE4;&#xC11C;&#xAC00; &#xAC00; &#xC788;&#xB294; &#xACF3;&#xC5D0;&#xB294; &#xD30C;&#xC77C;&#xBA85;&#xC744; &#xC4F0;&#xBA74; &#xB41C;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC544;&#xB798;&#xC5D0; &#xCF54;&#xB4DC;&#xB97C; &#xBD99;&#xC774;&#xBA74; &#xB41C;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC774;&#xAC78;&#xB85C; &#xC9C8;&#xBB38;&#xC744; &#xD558;&#xBA74; &#xB41C;&#xB2E4;. &#xD398;&#xC774;&#xC2A4;&#xBD81;&#xC758; &quot;&#xC0DD;&#xD65C;&#xCF54;&#xB529;&quot;&#xC774;&#xB77C;&#xB294; &#xADF8;&#xB8F9;&#xC774; &#xD604;&#xC7AC; &#xAC00;&#xC7A5; &#xC9C8;&#xBB38;&#xD558;&#xAE30; &#xC88B;&#xC740; &#xACF3;&#xC774;&#xB77C;&#xACE0; &#xC0DD;&#xAC01;&#xB41C;&#xB2E4;. &#xB124;&#xC774;&#xBC84;&#xB294; &#xBC84;&#xB824;&#xB77C;. &#xC601;&#xC5B4;&#xAC00; &#xC775;&#xC219;&#xD558;&#xBA74; &#xAD6C;&#xAE00;&#xC5D0;&#xC11C; &#xAC80;&#xC0C9;&#xD558;&#xBA74; &#xB418;&#xACE0;, &#xB300;&#xBD80;&#xBD84;&#xC758; &#xB2F5;&#xBCC0;&#xC740; StackOverflow&#xB85C; &#xADC0;&#xACB0;&#xB420; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>Asana&#xC5D0; &#xC9C8;&#xBB38;&#xC744; &#xB0A8;&#xAE38; &#xB54C;&#xB3C4;, Gist&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB0A8;&#xAE30;&#xBA74;, &#xC218;&#xC815;&#xD558;&#xAE30;&#xAC00; &#xC218;&#xC6D4;&#xD558;&#xB2E4;. &#xC0AC;&#xC9C4;&#xC744; &#xCC0D;&#xC5B4;&#xC11C; &#xC62C;&#xB9AC;&#xB294; &#xACBD;&#xC6B0; &#xC77D;&#xC744; &#xC218;&#xB294; &#xC788;&#xC73C;&#xB098;, &#xADF8; &#xCF54;&#xB4DC;&#xB97C; &#xC7AC;&#xD604;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xB2E4;&#xC2DC; &#xD0C0;&#xC774;&#xD551;&#xC744; &#xD574;&#xC57C; &#xD558;&#xB294; &#xC5B4;&#xB824;&#xC6C0;&#xC774; &#xC788;&#xB2E4;. &#xD604;&#xC7AC;&#xB294; &#xAC04;&#xB2E8;&#xD55C; &#xCF54;&#xB4DC;&#xC774;&#xC9C0;&#xB9CC;, &#xCF54;&#xB4DC;&#xAC00; &#xC218;&#xBC31;&#xC904;, &#xC218;&#xCC9C;&#xC904;&#xC774; &#xB418;&#xBA74;, &#xC0AC;&#xC9C4;&#xC73C;&#xB85C; &#xB0A8;&#xAE34; &#xCF54;&#xB4DC;&#xC5D0; &#xB300;&#xD55C; &#xB2F5;&#xBCC0;&#xC740; &#xD55C;&#xACC4;&#xAC00; &#xC788;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch03-syntax.html" class="navigation navigation-prev " aria-label="Previous page: 3장 기본기 다지기">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch05-write-file.html" class="navigation navigation-next " aria-label="Next page: 5장 파일 쓰기">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4장 파일 읽기","level":"1.6","depth":1,"next":{"title":"5장 파일 쓰기","level":"1.7","depth":1,"path":"ch05-write-file.md","ref":"ch05-write-file.md","articles":[]},"previous":{"title":"3장 기본기 다지기","level":"1.5","depth":1,"path":"ch03-syntax.md","ref":"ch03-syntax.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch04-read-file.md","mtime":"2020-11-08T10:07:10.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-08T10:12:08.512Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

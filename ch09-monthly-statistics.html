@@ -1,0 +1,474 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9장 월별 통계 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch10-GIS-table.html" />
+    
+    
+    <link rel="prev" href="ch08-statistics.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch00-prologue.html">
+            
+                <a href="ch00-prologue.html">
+            
+                    
+                    들어가며
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch01-setup.html">
+            
+                <a href="ch01-setup.html">
+            
+                    
+                    1장 파이썬 환경 구축하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch02-hello-world.html">
+            
+                <a href="ch02-hello-world.html">
+            
+                    
+                    2장 Hello, World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch03-syntax.html">
+            
+                <a href="ch03-syntax.html">
+            
+                    
+                    3장 기본기 다지기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch04-read-file.html">
+            
+                <a href="ch04-read-file.html">
+            
+                    
+                    4장 파일 읽기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch05-write-file.html">
+            
+                <a href="ch05-write-file.html">
+            
+                    
+                    5장 파일 쓰기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch06-handling-files.html">
+            
+                <a href="ch06-handling-files.html">
+            
+                    
+                    6장 여러 파일 다루기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch07-function.html">
+            
+                <a href="ch07-function.html">
+            
+                    
+                    7장 함수: 프로그램 조각내기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch08-statistics.html">
+            
+                <a href="ch08-statistics.html">
+            
+                    
+                    8장 연도별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="ch09-monthly-statistics.html">
+            
+                <a href="ch09-monthly-statistics.html">
+            
+                    
+                    9장 월별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch10-GIS-table.html">
+            
+                <a href="ch10-GIS-table.html">
+            
+                    
+                    10장 GIS용 자료만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch80-download-weather.html">
+            
+                <a href="ch80-download-weather.html">
+            
+                    
+                    부록A. 모든 측후소 자료 받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >9장 월별 통계</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC6D4;&#xBCC4;-&#xD1B5;&#xACC4;-&#xB9CC;&#xB4E4;&#xAE30;">&#xC6D4;&#xBCC4; &#xD1B5;&#xACC4; &#xB9CC;&#xB4E4;&#xAE30;</h1>
+<p>&#xC6D4;&#xBCC4; &#xC790;&#xB8CC;&#xB294; &#xC5F0;&#xB3C4;&#xBCC4; &#xC790;&#xB8CC;&#xC640; &#xCC98;&#xB9AC;&#xBC29;&#xC2DD;&#xC740; &#xB3D9;&#xC77C;&#xD558;&#xB098;, &#xC5F0;&#xB3C4;&#xC640; &#xC6D4;, 2&#xAC00;&#xC9C0; &#xC778;&#xB371;&#xC2A4;&#xB97C; &#xAC16;&#xAC8C; &#xB418;&#xC5B4; &#xB9AC;&#xC2A4;&#xD2B8;&#xAC00; &#xC870;&#xAE08; &#xB354; &#xBCF5;&#xC7A1;&#xD574;&#xC9C4;&#xB2E4;. &#xC5ED;&#xC2DC;&#xB098; pandas&#xB098; numpy&#xB97C; &#xC798; &#xC4F0;&#xAC8C; &#xB418;&#xBA74;, &#xC774;&#xB7EC;&#xD55C; &#xC791;&#xC5C5;&#xC744; &#xCF54;&#xB4DC; 1-2&#xC904;&#xB85C; &#xD574;&#xACB0;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xAE30;&#xCD08;&#xAC00; &#xC5C6;&#xB294; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C;&#xB294; &#xC554;&#xD638;&#xAC19;&#xC744; &#xC218; &#xBC16;&#xC5D0; &#xC5C6;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xAC80;&#xC0C9;&#xC744; &#xD574;&#xC11C; &#xCF54;&#xB4DC;&#xB97C; &#xCC3E;&#xB354;&#xB77C;&#xB3C4; &#xC815;&#xD655;&#xD788; &#xB3D9;&#xC77C;&#xD55C; &#xBB38;&#xC81C;&#xB294; &#xD478;&#xB294; &#xACBD;&#xC6B0;&#xB294; &#xAC70;&#xC758; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xC778;&#xD130;&#xB137;&#xC5D0;&#xC11C; &#xCC3E;&#xC740; &#xCF54;&#xB4DC;&#xB97C; &#xAC00;&#xC838;&#xB2E4; &#xC4F0;&#xAE30;&#xB3C4; &#xC27D;&#xC9C0;&#xAC00; &#xC54A;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC18C; &#xCF54;&#xB4DC;&#xAC00; &#xAE38;&#xC5B4;&#xC9C0;&#xB354;&#xB77C;&#xB3C4; C&#xC5B8;&#xC5B4;&#xC758; &#xBC30;&#xC5F4;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xACFC; &#xAC19;&#xC740; &#xD615;&#xD0DC;&#xB85C; &#xCF54;&#xB4DC;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xACA0;&#xB2E4;.</p>
+<h2 id="&#xC6D4;&#xBCC4;-&#xC790;&#xB8CC;-&#xBAA8;&#xC73C;&#xAE30;">&#xC6D4;&#xBCC4; &#xC790;&#xB8CC; &#xBAA8;&#xC73C;&#xAE30;</h2>
+<p>&#xC55E;&#xC11C; &#xC5F0;&#xBCC4; &#xC790;&#xB8CC;&#xB97C; &#xBAA8;&#xC73C;&#xB358; &#xCF54;&#xB4DC;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC558;&#xB2E4;. &#xB9AC;&#xC2A4;&#xD2B8;(&#xBC30;&#xC5F4;)&#xC758; &#xC778;&#xB371;&#xC2A4;&#xB294; 0&#xC774; &#xCCAB;&#xD574;, 1&#xC774; &#xB458;&#xC9F8;&#xD574;&#xB97C; &#xC758;&#xBBF8;&#xD558;&#xC600;&#xB2E4;. &#xC6D4;&#xBCC4; &#xC790;&#xB8CC;&#xB294; &#xC778;&#xB371;&#xC2A4;&#xAC00; 12&#xAC1C;&#xC529; &#xD55C;&#xD574;&#xAC00; &#xB420; &#xAC83;&#xC774;&#xB2E4;. &#xC989;, &#xC544;&#xB798;&#xCF54;&#xB4DC;&#xCC98;&#xB7FC; 48&#xB144;&#xCE58; &#xC790;&#xB8CC;&#xB97C; &#xB2E4;&#xB8EC;&#xB2E4;&#xACE0; &#xD558;&#xBA74;, 48 * 12 &#xAC1C; &#xB9CC;&#xD07C;&#xC758; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xB123;&#xC5B4;&#xC57C; &#xD560; &#xAC83;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_annual_prec</span><span class="hljs-params">(dataset)</span>:</span>
+    start_year = <span class="hljs-number">1970</span>
+    end_year = <span class="hljs-number">2017</span>
+    annual_prec = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(start_year, end_year + <span class="hljs-number">1</span>)]
+
+    <span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> dataset:
+        year = data[<span class="hljs-number">0</span>]
+        idx = year - start_year
+        <span class="hljs-keyword">if</span> idx &lt; <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">continue</span>
+        annual_prec[idx] += data[<span class="hljs-number">3</span>]
+
+    <span class="hljs-keyword">return</span> annual_prec
+</code></pre>
+<p>&#xC6D4;&#xBCC4; &#xC790;&#xB8CC;&#xB97C; &#xAD6C;&#xD558;&#xB294; &#xD568;&#xC218;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xACE0;&#xCCD0;&#xC11C; &#xC4F8; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_monthly_prec</span><span class="hljs-params">(dataset)</span>:</span>
+    start_year = <span class="hljs-number">1970</span>
+    end_year = <span class="hljs-number">2017</span>
+    total_years = end_year - start_year + <span class="hljs-number">1</span>
+    month_prec = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(total_years * <span class="hljs-number">12</span>)]
+
+    <span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> dataset:
+        year = data[<span class="hljs-number">0</span>]
+        month = data[<span class="hljs-number">1</span>]
+        idx = (year - start_year) * <span class="hljs-number">12</span> + (month - <span class="hljs-number">1</span>)
+        <span class="hljs-keyword">if</span> idx &lt; <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">continue</span>
+        month_prec[idx] += data[<span class="hljs-number">3</span>]
+
+    <span class="hljs-keyword">return</span> month_prec
+</code></pre>
+<p>&#xCD1D; &#xBC30;&#xC5F4;&#xC758; &#xD06C;&#xAE30;&#xB294; &#xC5F0;&#xB3C4;&#xC218;&#xC5D0; 12&#xB97C; &#xACF1;&#xD55C; &#xC218; &#xB9CC;&#xD07C;&#xC774; &#xB41C;&#xB2E4;&#xB294; &#xAC83;&#xC740; &#xC5B4;&#xB835;&#xC9C0; &#xC54A;&#xAC8C; &#xB530;&#xB77C;&#xC62C; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC778;&#xB371;&#xC2A4;&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xC778; <code>idx = (year - start_year) * 12 + (month - 1)</code>&#xC740; &#xB9E4;&#xC6B0; &#xD754;&#xD55C; &#xACC4;&#xC0B0;&#xC778;&#xB370;, &#xC5F0;&#xB3C4;&#xAC00; 1&#xB144; &#xC9C0;&#xB0A0;&#xB54C;&#xB9C8;&#xB2E4; 12&#xAC1C;&#xC529; &#xAC74;&#xB108;&#xB744;&#xAC8C; &#xB418;&#xACE0;, 0&#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD558;&#xBBC0;&#xB85C; <code>(month-1)</code>&#xB85C; &#xACC4;&#xC0B0;&#xD55C;&#xB2E4;.</p>
+<h2 id="&#xC6D4;&#xBCC4;-&#xC790;&#xB8CC;-&#xCD9C;&#xB825;&#xD558;&#xAE30;">&#xC6D4;&#xBCC4; &#xC790;&#xB8CC; &#xCD9C;&#xB825;&#xD558;&#xAE30;</h2>
+<p>&#xC6D4;&#xBCC4; &#xC790;&#xB8CC;&#xB97C; &#xBAA8;&#xC73C;&#xACE0; &#xB098;&#xBA74;, &#xC790;&#xB8CC;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC5B4;&#xB835;&#xC9C0; &#xC54A;&#xB2E4;. &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xD55C;&#xC904;&#xC5D0; &#xD55C;&#xB2EC;&#xCE58; &#xC790;&#xB8CC;&#xB9CC; &#xCD9C;&#xB825;&#xD558;&#xB824;&#xBA74;, &#xC778;&#xB371;&#xC2A4;&#xB9CC; &#xC798; &#xACC4;&#xC0B0;&#xD574;&#xC11C; &#xCD9C;&#xB825;&#xD574;&#xC8FC;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<pre><code>Year  Mon Prep
+1973  1    50
+1973  2    70
+...
+...
+...
+2017  12    30
+</code></pre><p>&#xD574;&#xB2F9; &#xAE30;&#xB2A5;&#xC744; &#xAD6C;&#xD604;&#xD55C; &#xCF54;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<pre><code class="lang-python">start_year = <span class="hljs-number">1970</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_monthly_data</span><span class="hljs-params">(dataset)</span>:</span>
+    print(<span class="hljs-string">&quot;Year  Mon Prep&quot;</span>)
+    <span class="hljs-keyword">for</span> i, data <span class="hljs-keyword">in</span> enumerate(dataset):
+        year = start_year + i // <span class="hljs-number">12</span>
+        month = i % <span class="hljs-number">12</span> + <span class="hljs-number">1</span>
+        print(<span class="hljs-string">&quot;{}\t{}\t{}&quot;</span>.format(year, month, data))
+</code></pre>
+<p><code>enumerate()</code>&#xD568;&#xC218;&#xB294; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xBC18;&#xBCF5;&#xD560; &#xB54C;, &#xC778;&#xB371;&#xC2A4;&#xB97C; &#xC138;&#xC5B4;&#xC8FC;&#xB294; &#xD568;&#xC218;&#xC774;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; <code>i</code>&#xC5D0;&#xB294; &#xBA87; &#xBC88;&#xC9F8; &#xAC12;&#xC778;&#xC9C0; &#xC778;&#xB371;&#xC2A4;&#xAC00; &#xD560;&#xB2F9;&#xB418;&#xACE0;, <code>data</code>&#xC5D0; &#xAC01; &#xC6D4;&#xBCC4; &#xAC15;&#xC218;&#xB7C9;&#xD569;&#xC774; &#xB4E4;&#xC5B4;&#xAC00;&#xAC8C; &#xB41C;&#xB2E4;. &#xC778;&#xB371;&#xC2A4; &#xACC4;&#xC0B0;&#xC740; &#xC55E;&#xC11C; &#xACC4;&#xC0B0;&#xD55C; &#xBC29;&#xC2DD;&#xACFC; &#xAC70;&#xAFB8;&#xB85C;&#xC774;&#xB2E4;. &#xC778;&#xB371;&#xC2A4;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC;, &#xC5F0;&#xB3C4;&#xC640; &#xC6D4;&#xC744; &#xACC4;&#xC0B0;&#xD558;&#xB294; &#xACFC;&#xC815;&#xC778;&#xB370;, <code>//</code>&#xB294; &#xBAAB;&#xC744; &#xACC4;&#xC0B0;&#xD558;&#xACE0;, <code>%</code>&#xB294; &#xB098;&#xBA38;&#xC9C0;&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xB294; &#xC5F0;&#xC0B0;&#xC790;&#xC774;&#xB2E4;. &#xCC98;&#xC74C;&#xC5D0;&#xB294; &#xC774;&#xB7EC;&#xD55C; &#xACC4;&#xC0B0;&#xC774; &#xB9E4;&#xC6B0; &#xC5B4;&#xB835;&#xAC8C; &#xB290;&#xAEF4;&#xC9C8; &#xC218; &#xC788;&#xC73C;&#xB098;, &#xC22B;&#xC790;&#xB97C; &#xD558;&#xB098;&#xC529; &#xB123;&#xC5B4;&#xBCF4;&#xBA74;&#xC11C; &#xAC12;&#xC744; &#xACC4;&#xC0B0;&#xD574;&#xBCF4;&#xBA74; &#xADF8;&#xB807;&#xAC8C; &#xC5B4;&#xB835;&#xC9C0;&#xB294; &#xC54A;&#xC744; &#xAC83;&#xC774;&#xB2E4;.</p>
+<h2 id="&#xC6D4;&#xBCC4;-&#xC790;&#xB8CC;-&#xD14C;&#xC774;&#xBE14;-&#xD615;&#xD0DC;&#xB85C;-&#xCD9C;&#xB825;&#xD558;&#xAE30;">&#xC6D4;&#xBCC4; &#xC790;&#xB8CC; &#xD14C;&#xC774;&#xBE14; &#xD615;&#xD0DC;&#xB85C; &#xCD9C;&#xB825;&#xD558;&#xAE30;</h2>
+<p>&#xD589; &#xBC29;&#xD5A5;&#xC73C;&#xB85C;&#xB294; &#xC5F0;&#xB3C4;&#xB97C; &#xC5F4; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC6D4;&#xBCC4; &#xC790;&#xB8CC;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xC790;.</p>
+<pre><code class="lang-python">start_year = <span class="hljs-number">1970</span>
+end_year = <span class="hljs-number">2017</span>
+total_years = end_year - start_year + <span class="hljs-number">1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_month_table_data</span><span class="hljs-params">(dataset)</span>:</span>
+    print(<span class="hljs-string">&quot;Year&quot;</span>, end=<span class="hljs-string">&quot;&quot;</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">12</span>):
+        print(<span class="hljs-string">&quot;{:&gt;8}&quot;</span>.format(<span class="hljs-string">&quot;M&quot;</span> + str(i+<span class="hljs-number">1</span>)), end=<span class="hljs-string">&quot;&quot;</span>)
+    print()
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(total_years):
+        year = i + start_year
+        print(year, end=<span class="hljs-string">&quot;&quot;</span>)
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">12</span>):
+            idx = i * <span class="hljs-number">12</span> + j
+            print(<span class="hljs-string">&quot;{:8.1f}&quot;</span>.format(dataset[idx]), end=<span class="hljs-string">&quot;&quot;</span>)
+        print()
+</code></pre>
+<p>&#xD615;&#xC2DD;&#xC744; &#xC7A1;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xCF54;&#xB4DC;&#xAC00; &#xB2E4;&#xC18C; &#xBCF5;&#xC7A1;&#xD574; &#xBCF4;&#xC774;&#xAE34; &#xD558;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC;, &#xD558;&#xB098;&#xC529; &#xACE0;&#xCCD0;&#xAC00;&#xBA74;&#xC11C; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74; &#xADF8;&#xB807;&#xAC8C; &#xC5B4;&#xB835;&#xC9C4; &#xC54A;&#xC744; &#xAC83;&#xC774;&#xB2E4;. <code>print</code> &#xD568;&#xC218;&#xB97C; &#xC4F8; &#xB54C; <code>end=&quot;&quot;</code>&#xB97C; &#xC4F0;&#xACE0; &#xC788;&#xB294;&#xB370;, &#xC774;&#xAC78; &#xC4F0;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; <code>print</code>&#xBB38;&#xC774; &#xD638;&#xCD9C;&#xB420;&#xB54C;&#xB9C8;&#xB2E4; &#xC904;&#xBC14;&#xAFC8;&#xC774; &#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC904;&#xBC14;&#xAFC8;&#xC744; &#xBC29;&#xC9C0;&#xD558;&#xAE30; &#xC704;&#xD558;&#xC5EC; &#xCD94;&#xAC00;&#xD574;&#xC8FC;&#xB294; &#xCF54;&#xB4DC;&#xC774;&#xB2E4;.</p>
+<h2 id="&#xC6D4;&#xBCC4;-&#xD1B5;&#xACC4;&#xC790;&#xB8CC;">&#xC6D4;&#xBCC4; &#xD1B5;&#xACC4;&#xC790;&#xB8CC;</h2>
+<p>&#xD14C;&#xC774;&#xBE14; &#xD615;&#xD0DC;&#xB85C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC54C;&#xC544;&#xBCF4;&#xC558;&#xACE0;, &#xAE30;&#xCD08; &#xD1B5;&#xACC4;&#xB294; 8&#xC7A5;&#xC5D0;&#xC11C; &#xC54C;&#xC544;&#xBCF4;&#xC558;&#xB2E4;. &#xC774; &#xB458; &#xCF54;&#xB4DC;&#xB97C; &#xC798; &#xC870;&#xD569;&#xD558;&#xC5EC; &#xB9C8;&#xC9C0;&#xB9C9; &#xC791;&#xC5C5;&#xC744; &#xC218;&#xD589;&#xD558;&#xBA74; &#xB418;&#xB294;&#xB370;, &#xD55C;&#xAC00;&#xC9C0; &#xB09C;&#xAD00;&#xC740; &#xC5F0;&#xB3C4;&#xBCC4;&#xB85C; &#xC790;&#xB8CC;&#xB97C; &#xBAA8;&#xC558;&#xB4EF;&#xC774; &#xC6D4;&#xBCC4; &#xC790;&#xB8CC;, &#xC989; 1&#xC6D4; &#xD1B5;&#xACC4;&#xB97C; &#xC704;&#xD574;&#xC11C;&#xB294; 1&#xC6D4; &#xC790;&#xB8CC;&#xB9CC; &#xB2E4; &#xBAA8;&#xC544;&#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;. &#xC774; &#xBD80;&#xBD84;&#xB9CC; &#xD574;&#xACB0;&#xD558;&#xBA74; &#xC55E;&#xC11C; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xC5EC; &#xC27D;&#xAC8C; &#xAD6C;&#xD604;&#xD560; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;. &#xD3C9;&#xADE0;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xCF54;&#xB4DC;&#xB97C; &#xC81C;&#xACF5;&#xD560;&#xD14C;&#xB2C8;, &#xB098;&#xBA38;&#xC9C0; &#xD1B5;&#xACC4;&#xCE58;&#xB294; &#xAC01;&#xC790; &#xCD94;&#xAC00;&#xD574;&#xBCF4;&#xC790;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_stat</span><span class="hljs-params">(dataset)</span>:</span>
+    print(<span class="hljs-string">&quot;{:10}&quot;</span>.format(<span class="hljs-string">&quot;Avg&quot;</span>), end=<span class="hljs-string">&quot;&quot;</span>)
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">12</span>):
+        month_data = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(total_years):
+            idx = i * <span class="hljs-number">12</span> + j
+            month_data.append(dataset[idx])
+        print(<span class="hljs-string">&quot;{:8.1f}&quot;</span>.format(np.mean(month_data)), end=<span class="hljs-string">&quot;&quot;</span>)
+    print()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch08-statistics.html" class="navigation navigation-prev " aria-label="Previous page: 8장 연도별 통계">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch10-GIS-table.html" class="navigation navigation-next " aria-label="Next page: 10장 GIS용 자료만들기">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9장 월별 통계","level":"1.11","depth":1,"next":{"title":"10장 GIS용 자료만들기","level":"1.12","depth":1,"path":"ch10-GIS-table.md","ref":"ch10-GIS-table.md","articles":[]},"previous":{"title":"8장 연도별 통계","level":"1.10","depth":1,"path":"ch08-statistics.md","ref":"ch08-statistics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch09-monthly-statistics.md","mtime":"2020-11-08T10:08:35.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-08T10:12:08.512Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

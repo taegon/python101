@@ -1,0 +1,418 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3장 기본기 다지기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch04-read-file.html" />
+    
+    
+    <link rel="prev" href="ch02-hello-world.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch00-prologue.html">
+            
+                <a href="ch00-prologue.html">
+            
+                    
+                    들어가며
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch01-setup.html">
+            
+                <a href="ch01-setup.html">
+            
+                    
+                    1장 파이썬 환경 구축하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch02-hello-world.html">
+            
+                <a href="ch02-hello-world.html">
+            
+                    
+                    2장 Hello, World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="ch03-syntax.html">
+            
+                <a href="ch03-syntax.html">
+            
+                    
+                    3장 기본기 다지기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch04-read-file.html">
+            
+                <a href="ch04-read-file.html">
+            
+                    
+                    4장 파일 읽기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch05-write-file.html">
+            
+                <a href="ch05-write-file.html">
+            
+                    
+                    5장 파일 쓰기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch06-handling-files.html">
+            
+                <a href="ch06-handling-files.html">
+            
+                    
+                    6장 여러 파일 다루기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch07-function.html">
+            
+                <a href="ch07-function.html">
+            
+                    
+                    7장 함수: 프로그램 조각내기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch08-statistics.html">
+            
+                <a href="ch08-statistics.html">
+            
+                    
+                    8장 연도별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch09-monthly-statistics.html">
+            
+                <a href="ch09-monthly-statistics.html">
+            
+                    
+                    9장 월별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch10-GIS-table.html">
+            
+                <a href="ch10-GIS-table.html">
+            
+                    
+                    10장 GIS용 자료만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch80-download-weather.html">
+            
+                <a href="ch80-download-weather.html">
+            
+                    
+                    부록A. 모든 측후소 자료 받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >3장 기본기 다지기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xAE30;&#xBCF8;&#xAE30;-&#xB2E4;&#xC9C0;&#xAE30;">&#xAE30;&#xBCF8;&#xAE30; &#xB2E4;&#xC9C0;&#xAE30;</h1>
+<p>&#xCC45;&#xC744; &#xC4F0;&#xBA74;&#xC11C; &#xAC00;&#xC7A5; &#xACE0;&#xBBFC;&#xD55C; &#xBD80;&#xBD84;&#xC778;&#xB370;, &#xBC14;&#xB85C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC758; &#xAE30;&#xBCF8; &#xBB38;&#xBC95; &#xD30C;&#xD2B8;&#xC774;&#xB2E4;. &#xB300;&#xBD80;&#xBD84;&#xC758; &#xC5B8;&#xC5B4;&#xAC00; &#xBE44;&#xC2B7;&#xD55C; &#xD615;&#xD0DC;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC744; &#xD55C; &#xBC88;&#xC774;&#xB77C;&#xB3C4; &#xBC30;&#xC6CC;&#xBD24;&#xB2E4;&#xBA74; &#xC27D;&#xAC8C; &#xB118;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB294; &#xBD80;&#xBD84;&#xC774;&#xC9C0;&#xB9CC;, &#xCC98;&#xC74C; &#xBC30;&#xC6B0;&#xB294; &#xC785;&#xC7A5;&#xC774;&#xB77C;&#xBA74; &#xC774; &#xBD80;&#xBD84;&#xC774; &#xAC00;&#xC7A5; &#xC5B4;&#xB835;&#xACE0;, &#xC9C0;&#xB8E8;&#xD55C; &#xBD80;&#xBD84;&#xC774; &#xB420; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xBB34;&#xC5C7;&#xBCF4;&#xB2E4; &#xB0B4;&#xAC00; &#xC774;&#xAC78; &#xC4F0;&#xACE0; &#xC788;&#xB294; &#xC774;&#xC720;&#xB294; &#xB2E4;&#xB978; &#xCC45;&#xB4E4;&#xC774; &#xCEE4;&#xBC84;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xB294; &#xBD80;&#xBD84;, &#xC989; &#xC6B0;&#xB9AC; &#xBD84;&#xC57C; &#xC5F0;&#xAD6C;&#xC640; &#xBC00;&#xC811;&#xD558;&#xAC8C; &#xAD00;&#xB828;&#xB41C; &#xC608;&#xC81C;&#xB85C; &#xC2E4;&#xC6A9;&#xC801;&#xC73C;&#xB85C; &#xC4F8; &#xC218; &#xC788;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xBC30;&#xC6C0;&#xC744; &#xC804;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xAC83;&#xC778;&#xB370;, &#xAE30;&#xBCF8; &#xBB38;&#xBC95; &#xBD80;&#xBD84;&#xC740; &#xC88B;&#xC740; &#xCC45;&#xC774; &#xB108;&#xBB34; &#xB9CE;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xB0B4;&#xAC00; &#xADF8;&#xAC78; &#xC77C;&#xC77C;&#xC774; &#xC124;&#xBA85;&#xD558;&#xAE30;&#xC5D0;&#xB3C4; &#xB108;&#xBB34; &#xBE44;&#xD6A8;&#xC728;&#xC801;&#xC774;&#xB2E4;.</p>
+<p>&#xADF8;&#xB798;&#xC11C; &#xC774;&#xBC88; &#xC7A5;&#xC740; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xC694;&#xC57D; &#xC815;&#xB9AC;&#xB9CC; &#xD558;&#xACE0;, &#xB300;&#xC2E0; &#xD559;&#xC2B5;&#xD558;&#xAE30; &#xC88B;&#xC740; &#xB9C1;&#xD06C;&#xB4E4;&#xB85C; &#xB300;&#xCCB4;&#xD558;&#xACE0;&#xC790; &#xD55C;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC880; &#xCCB4;&#xACC4;&#xC801;&#xC73C;&#xB85C; &#xBC30;&#xC6B0;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74;, &#xC11C;&#xC810; &#xAC00;&#xBA74; &#xAD00;&#xB828; &#xCC45;&#xC774; &#xC218;&#xBC31;&#xAD8C;&#xC740; &#xC788;&#xC744;&#xD150;&#xB370;, &#xC77D;&#xAE30; &#xD3B8;&#xD558;&#xACE0; &#xC7AC;&#xBBF8;&#xC788;&#xC5B4; &#xBCF4;&#xC774;&#xB294; &#xAC78;&#xB85C; &#xACE8;&#xC544;&#xC11C; &#xBCF4;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<h2 id="&#xACF5;&#xBD80;&#xD558;&#xAE30;-&#xC88B;&#xC740;-&#xC790;&#xB8CC;">&#xACF5;&#xBD80;&#xD558;&#xAE30; &#xC88B;&#xC740; &#xC790;&#xB8CC;</h2>
+<ul>
+<li>&#xBC15;&#xC5F0;&#xC624; &#xC800;&#xC790;&#xC758; <a href="https://python.bakyeono.net/index.html" target="_blank">&lt;&#xD30C;&#xC774;&#xC36C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC785;&#xBB38;&#xC11C; (&#xAC00;&#xC81C;)&gt;</a>: &#xC6B0;&#xC5F0;&#xD788; &#xC774; &#xC790;&#xB8CC;&#xB97C; &#xCC3E;&#xAC8C; &#xB418;&#xC5C8;&#xB294;&#xB370;, &#xC774;&#xAC78; &#xBCF4;&#xACE0; &#xB098;&#xB2C8; &#xB0B4;&#xAC00; &#xAE30;&#xBCF8;&#xBB38;&#xBC95;&#xC5D0; &#xAD00;&#xD574;&#xC11C; &#xC368;&#xC57C;&#xACA0;&#xB2E4;&#xB294; &#xC0DD;&#xAC01;&#xC744; &#xC644;&#xC804;&#xD788; &#xC811;&#xAC8C; &#xB418;&#xC5C8;&#xB2E4;. 7&#xC7A5; &#xC815;&#xB3C4;&#xAE4C;&#xC9C0;&#xB9CC; &#xBCF4;&#xBA74; &#xB420; &#xAC83; &#xAC19;&#xB2E4;.</li>
+<li><a href="https://learnxinyminutes.com/docs/python/" target="_blank">Learn X in Y minutes</a>: &#xD55C; &#xD398;&#xC774;&#xC9C0;&#xC9DC;&#xB9AC; &#xAE34; &#xCF54;&#xB4DC;&#xAC00; &#xC788;&#xB2E4;. &#xC774;&#xAC78; &#xB2E4; &#xC77D;&#xC744; &#xC218; &#xC788;&#xC73C;&#xBA74;, &#xBB38;&#xBC95;&#xC744; &#xB9C8;&#xC2A4;&#xD130;&#xD55C; &#xAC83;&#xC73C;&#xB85C; &#xC774;&#xD574;&#xD574;&#xB3C4; &#xB41C;&#xB2E4;. &#xBB3C;&#xB860; &#xC77C;&#xBD80;&#xB9CC; &#xC774;&#xD574;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xACE0; &#xD574;&#xB3C4; &#xC0C1;&#xAD00;&#xC5C6;&#xB2E4;. &#xB9E8; &#xC544;&#xB798; &#xAD00;&#xB828;&#xD558;&#xC5EC; &#xC720;&#xC6A9;&#xD55C; &#xC790;&#xB8CC;&#xB4E4;&#xC744; &#xB9C1;&#xD06C;&#xD558;&#xACE0; &#xC788;&#xB294;&#xB370;, &#xC774; &#xC5ED;&#xC2DC; &#xBCFC; &#xB9CC;&#xD558;&#xB2E4;.</li>
+<li><a href="https://pyformat.info/" target="_blank">PyFormat: Using % and .format() for great good!</a>: &#xC774; &#xD398;&#xC774;&#xC9C0;&#xB294; &#xCD9C;&#xB825;&#xC591;&#xC2DD;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC815;&#xB9AC;&#xD574;&#xB193;&#xC740; &#xD398;&#xC774;&#xC9C0;&#xC778;&#xB370;, &#xC544;&#xC8FC; &#xC798; &#xC815;&#xB9AC;&#xB418;&#xC5B4; &#xC788;&#xB2E4;.</li>
+<li>&#xAC1C;&#xC778;&#xC801;&#xC73C;&#xB85C;&#xB294; &quot;&#xBC11;&#xBC14;&#xB2E5;&#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xB370;&#xC774;&#xD130; &#xACFC;&#xD559;&quot; (1,2&#xD310; &#xC0C1;&#xAD00;&#xC5C6;&#xB2E4;)&#xC758; 2&#xC7A5;&#xC744; &#xCD94;&#xCC9C;&#xD55C;&#xB2E4;. &#xC57D; 30&#xD398;&#xC774;&#xC9C0; &#xBD84;&#xB7C9;&#xC778;&#xB370;, &#xB300;&#xBD80;&#xBD84; &#xAD49;&#xC7A5;&#xD788; &#xAE30;&#xCD08;&#xC801;&#xC778; &#xB0B4;&#xC6A9;&#xB9CC; &#xB2E4;&#xB8E8;&#xB294;&#xB370; &#xBC18;&#xD574;, &#xC774; &#xCC45;&#xC758; &#xC800;&#xC790; Joel&#xC740; &#xC0C1;&#xB2F9;&#xD788; &#xC2E4;&#xC6A9;&#xC801;&#xC774;&#xACE0; &#xC720;&#xC6A9;&#xD55C; &#xB0B4;&#xC6A9;&#xB3C4; &#xD3EC;&#xD568;&#xD558;&#xACE0; &#xC788;&#xB2E4;.</li>
+<li>&#xADF8; &#xC678; &#xB2E4;&#xC218;&#xC758; &#xCC45;&#xC774; &#xC788;&#xC9C0;&#xB9CC;, &#xC774;&#xAC74; &#xAC1C;&#xC778; &#xCDE8;&#xD5A5;&#xC5D0; &#xB9E1;&#xAE30;&#xACA0;&#xB2E4;.</li>
+</ul>
+<h2 id="&#xAC04;&#xB2E8;-&#xC694;&#xC57D;">&#xAC04;&#xB2E8; &#xC694;&#xC57D;</h2>
+<ul>
+<li>&#xBCC0;&#xC218; &#xC120;&#xC5B8;&#xC774;&#xB784; &#xAC8C; &#xC5C6;&#xB2E4;. &#xADF8;&#xB0E5; &#xC4F0;&#xBA74; &#xB41C;&#xB2E4;. <code>a=42</code>&#xB77C;&#xACE0; &#xC4F0;&#xACE0; &#xB098;&#xBA74;, &#xADF8; &#xC544;&#xB798; &#xBD80;&#xD130;&#xB294; <code>a</code>&#xB77C;&#xACE0; &#xC4F0;&#xBA74; &#xD30C;&#xC774;&#xC36C;&#xC774; <code>42</code>&#xB77C;&#xACE0; &#xC54C;&#xC544;&#xB4E3;&#xB294;&#xB2E4;. &#xADF8;&#xB7FC; &#xC601;&#xBB38;&#xC790; a&#xB97C; &#xC4F0;&#xACE0; &#xC2F6;&#xC73C;&#xBA74;, &#xC5B4;&#xB5BB;&#xAC8C; &#xD574;&#xC57C;&#xD558;&#xB098;? <code>&quot;a&quot;</code>&#xB77C;&#xACE0; &#xB530;&#xC634;&#xD45C;&#xB97C; &#xBD99;&#xC5EC;&#xC8FC;&#xBA74;, &#xBCC0;&#xC218;&#xAC00; &#xC544;&#xB2C8;&#xB77C; &#xAE00;&#xC790;&#xB85C; &#xC778;&#xC2DD;&#xD55C;&#xB2E4;.</li>
+<li>&#xC790;&#xB8CC;&#xD615;&#xC5D0;&#xB294; &#xBB38;&#xC790;, &#xC815;&#xC218;, &#xC2E4;&#xC218; &#xC815;&#xB3C4;&#xAC00; &#xC788;&#xB2E4;&#xB294; &#xAC74; &#xC54C;&#xACE0; &#xC788;&#xC790;.</li>
+<li><code>=</code>&#xC640; <code>==</code>&#xC758; &#xCC28;&#xC774;&#xB97C; &#xC54C;&#xC544;&#xC57C; &#xD55C;&#xB2E4;. &#xB4F1;&#xD638;&#xAC00; &#xD55C; &#xAC1C;&#xC77C;&#xB54C;&#xB294; &quot;&#xAC19;&#xB2E4;&quot;&#xB77C;&#xB294; &#xC758;&#xBBF8;&#xAC00; &#xC544;&#xB2C8;&#xB77C;, &#xD560;&#xB2F9;&#xC758; &#xC758;&#xBBF8;&#xC774;&#xB2E4;. &#xC55E;&#xC11C; <code>a=42</code>&#xB77C;&#xACE0; &#xC4F4; &#xCF54;&#xB4DC;&#xCC98;&#xB7FC;, <code>a</code>&#xB77C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; <code>42</code>&#xB97C; &#xB123;&#xB294; &#xAC83;(&#xD560;&#xB2F9;)&#xC774;&#xB2E4;. &quot;&#xAC19;&#xB2E4;&quot;&#xB77C;&#xB294; &#xC758;&#xBBF8;&#xC758; &#xB4F1;&#xD638;&#xB294; &#xAF2D; 2&#xAC1C;&#xB97C; &#xC368;&#xC57C; &#xD55C;&#xB2E4;.</li>
+<li>&#xC0AC;&#xCE59;&#xC5F0;&#xC0B0;, &#xAD04;&#xD638;, &#xC218;&#xD559;&#xD568;&#xC218; &#xC774;&#xB7F0; &#xAC74; &#xC0C1;&#xC0C1;&#xD558;&#xB294;&#xB300;&#xB85C; &#xB2E4; &#xC4F8; &#xC218; &#xC788;&#xB2E4;. &#xC218;&#xD559;&#xD568;&#xC218;&#xC640; &#xBAAB;&#xACFC; &#xB098;&#xBA38;&#xC9C0; &#xACC4;&#xC0B0; &#xB4F1;&#xC740; &#xB098;&#xC911;&#xC5D0; &#xC2E4;&#xC81C; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC608;&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xB2E4;&#xC2DC; &#xB2E4;&#xB8E8;&#xACA0;&#xB2E4;.</li>
+<li>&#xBC18;&#xBCF5;&#xBB38;&#xC740; <code>for</code>&#xC640; <code>while</code>&#xC774; &#xC788;&#xACE0;, &#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xC11C;&#xB294; &#xC8FC;&#xB85C; <code>for</code>&#xBB38;&#xC744; &#xC4F4;&#xB2E4;. <code>continue</code>&#xC640; <code>break</code> &#xD0A4;&#xC6CC;&#xB4DC; &#xC815;&#xB3C4; &#xB208;&#xC5D0; &#xC775;&#xD600;&#xB193;&#xC73C;&#xBA74; &#xC88B;&#xACA0;&#xB2E4;.</li>
+<li>&#xBE44;&#xAD50;&#xBB38;&#xC740; <code>if</code>, <code>elif</code>, <code>else</code>&#xB85C; &#xAD6C;&#xC131;&#xB418;&#xB294; &#xAD6C;&#xBB38;&#xC774;&#xACE0;, &#xBE44;&#xAD50;&#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xC0C1;&#xC2DD;&#xC801;&#xC73C;&#xB85C; &#xC4F8; &#xC218; &#xC788;&#xB2E4;. &#xB2E4;&#xB9CC;, &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC5B8;&#xC5B4;&#xC640; &#xB2EC;&#xB9AC; <code>in</code>&#xC774;&#xB77C;&#xB294; &#xD0A4;&#xC6CC;&#xB4DC;&#xC640; <code>not</code>, <code>and</code>, <code>or</code>&#xC640; &#xAC19;&#xC740; &#xC601;&#xC5B4;&#xB2E8;&#xC5B4;&#xB97C; &#xADF8;&#xB300;&#xB85C; &#xC4F4;&#xB2E4;&#xB294; &#xC810;&#xC774; &#xD2B9;&#xC774;&#xD558;&#xB2E4;.<ul>
+<li>&#xBE44;&#xAD50;&#xBB38;&#xC5D0;&#xC11C; &#xD558;&#xB098; &#xB354; &#xC54C;&#xACE0; &#xAC08; &#xC2DC;&#xC2A4;&#xD15C;&#xBCC0;&#xC218;&#xB85C;, <code>True</code>, <code>False</code>, <code>None</code> &#xC815;&#xB3C4;&#xAC00; &#xC788;&#xB2E4;.</li>
+</ul>
+</li>
+<li>&#xC5EC;&#xAE30;&#xC11C; &#xB2E4;&#xC2DC;&#xD55C;&#xBC88;, &#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xC11C; &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30;&#xB294; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD558;&#xB2E4;. &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC5B8;&#xC5B4;&#xC5D0;&#xC11C;&#xB294; &#xCF54;&#xB4DC; &#xB369;&#xC5B4;&#xB9AC;(&#xBE14;&#xB85D;)&#xB97C; &#xC815;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xB300;&#xAD04;&#xD638;({})&#xB098;, <code>if - endif</code>&#xC640; &#xAC19;&#xC740; &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD55C;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xD30C;&#xC774;&#xC36C;&#xC740; &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30;&#xB85C; &#xBE14;&#xB85D;&#xC744; &#xC815;&#xC758;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xB9E4;&#xC6B0; &#xC8FC;&#xC758;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC788;&#xB2E4;.</li>
+<li>&#xCD9C;&#xB825;&#xC740; <code>print()</code> &#xD568;&#xC218;&#xB97C; &#xC4F0;&#xACE0;, &#xCD9C;&#xB825;&#xC591;&#xC2DD;&#xC744; &#xC815;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; <code>format()</code>&#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD560; &#xAC83;&#xC774;&#xB2E4;. &#xD3EC;&#xB9F7;&#xACFC; &#xAD00;&#xB828;&#xD574;&#xC11C;&#xB294; &#xC704; &#xC790;&#xB8CC;&#xC5D0;&#xC11C; <a href="https://pyformat.info/" target="_blank">PyFormat</a>&#xB97C; &#xCC38;&#xC870;&#xD558;&#xC790;.</li>
+<li>&#xD0A4;&#xBCF4;&#xB4DC; &#xC785;&#xB825;&#xC740; <code>input()</code>&#xC774;&#xB77C;&#xB294; &#xD568;&#xC218;&#xB97C; &#xC4F0;&#xB294;&#xB370;, &#xB2E4;&#xB8E8;&#xC9C0; &#xC54A;&#xC744; &#xAC83;&#xC774;&#xB2E4;. &#xAC70;&#xC758; &#xC4F8; &#xC77C;&#xC774; &#xC5C6;&#xB2E4;. &#xB300;&#xBD80;&#xBD84; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xC790;&#xB8CC;&#xB97C; &#xC77D;&#xAC8C; &#xB420; &#xAC83;&#xC774;&#xB2E4;.</li>
+<li>&#xB9AC;&#xC2A4;&#xD2B8;([]&#xB85C; &#xBB36;&#xB294; &#xC790;&#xB8CC;&#xD615;)&#xB294; &#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xC11C; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD558;&#xB2E4;. &#xC774; &#xB9AC;&#xC2A4;&#xD2B8;&#xC640; &#xC0AC;&#xC804;&#xD615;(dict) &#xB54C;&#xBB38;&#xC5D0; &#xD30C;&#xC774;&#xC36C;&#xC744; &#xC4F4;&#xB2E4;&#xACE0; &#xD574;&#xB3C4; &#xACFC;&#xC5B8;&#xC774; &#xC544;&#xB2C8;&#xB2E4;. &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC778;&#xB371;&#xC2A4; &#xC4F0;&#xB294; &#xBC95; &#xC815;&#xB3C4;&#xB294; &#xAC04;&#xB2E8;&#xD788; &#xC775;&#xD600;&#xB450;&#xC790;.<ul>
+<li><code>a[0]</code>&#xB294; &#xCCAB;&#xBC88;&#xC9F8; &#xC6D0;&#xC18C;, <code>a[-1]</code>&#xC740; &#xB9C8;&#xC9C0;&#xB9C9; &#xC6D0;&#xC18C;, <code>a[1:3]</code>&#xC740; &#xB450;&#xBC88;&#xC9F8;&#xC5D0;&#xC11C; 3&#xBC88;&#xC9F8;&#xAE4C;&#xC9C0; 2&#xAC1C;&#xC758; &#xAC12;&#xC744; &#xB2F4;&#xC740; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC758;&#xBBF8;&#xD558;&#xB294;&#xB370;, &#xC774; &#xC815;&#xB3C4;&#xB294; &#xC774;&#xD574;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</li>
+</ul>
+</li>
+<li>List Comprehensions(&#xC9C0;&#xB2A5;&#xD615; &#xB9AC;&#xC2A4;&#xD2B8;)&#xC774;&#xB77C;&#xACE0; &#xBD80;&#xB974;&#xB294; &#xD55C;&#xC904;&#xB85C; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xC788;&#xB294;&#xB370;, &#xC774;&#xB294; &#xB098;&#xC911;&#xC5D0; &#xB2E4;&#xC2DC; &#xB2E4;&#xB8E8;&#xACA0;&#xB2E4;. <code>[x*2+1 for x in range(5)]</code>&#xB77C;&#xACE0; &#xC4F0;&#xBA74; 1&#xBD80;&#xD130; 9&#xAE4C;&#xC9C0; &#xD640;&#xC218;&#xB97C; &#xBAA8;&#xC740; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC900;&#xB2E4;.</li>
+<li>&#xD568;&#xC218;&#xB294; <code>def function_name(arg1, args2)</code>&#xC640; &#xAC19;&#xC774; &#xC815;&#xC758;&#xD55C;&#xB2E4;. &#xC5ED;&#xC2DC; &#xB098;&#xC911;&#xC5D0; &#xC0C1;&#xC138;&#xD788; &#xB2E4;&#xB8E8;&#xACA0;&#xB2E4;. &#xB208;&#xC5D0; &#xC775;&#xD788;&#xB294; &#xC815;&#xB3C4;&#xB85C; &#xC9DA;&#xACE0; &#xB118;&#xC5B4;&#xAC00;&#xC790;.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch02-hello-world.html" class="navigation navigation-prev " aria-label="Previous page: 2장 Hello, World">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch04-read-file.html" class="navigation navigation-next " aria-label="Next page: 4장 파일 읽기">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3장 기본기 다지기","level":"1.5","depth":1,"next":{"title":"4장 파일 읽기","level":"1.6","depth":1,"path":"ch04-read-file.md","ref":"ch04-read-file.md","articles":[]},"previous":{"title":"2장 Hello, World","level":"1.4","depth":1,"path":"ch02-hello-world.md","ref":"ch02-hello-world.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch03-syntax.md","mtime":"2020-11-08T10:06:55.893Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-08T10:12:08.512Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

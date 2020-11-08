@@ -1,0 +1,482 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7장 함수: 프로그램 조각내기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch08-statistics.html" />
+    
+    
+    <link rel="prev" href="ch06-handling-files.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch00-prologue.html">
+            
+                <a href="ch00-prologue.html">
+            
+                    
+                    들어가며
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch01-setup.html">
+            
+                <a href="ch01-setup.html">
+            
+                    
+                    1장 파이썬 환경 구축하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch02-hello-world.html">
+            
+                <a href="ch02-hello-world.html">
+            
+                    
+                    2장 Hello, World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch03-syntax.html">
+            
+                <a href="ch03-syntax.html">
+            
+                    
+                    3장 기본기 다지기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch04-read-file.html">
+            
+                <a href="ch04-read-file.html">
+            
+                    
+                    4장 파일 읽기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch05-write-file.html">
+            
+                <a href="ch05-write-file.html">
+            
+                    
+                    5장 파일 쓰기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch06-handling-files.html">
+            
+                <a href="ch06-handling-files.html">
+            
+                    
+                    6장 여러 파일 다루기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="ch07-function.html">
+            
+                <a href="ch07-function.html">
+            
+                    
+                    7장 함수: 프로그램 조각내기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch08-statistics.html">
+            
+                <a href="ch08-statistics.html">
+            
+                    
+                    8장 연도별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch09-monthly-statistics.html">
+            
+                <a href="ch09-monthly-statistics.html">
+            
+                    
+                    9장 월별 통계
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch10-GIS-table.html">
+            
+                <a href="ch10-GIS-table.html">
+            
+                    
+                    10장 GIS용 자료만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch80-download-weather.html">
+            
+                <a href="ch80-download-weather.html">
+            
+                    
+                    부록A. 모든 측후소 자료 받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >7장 함수: 프로그램 조각내기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xD568;&#xC218;-&#xD504;&#xB85C;&#xADF8;&#xB7A8;-&#xC870;&#xAC01;&#xB0B4;&#xAE30;">&#xD568;&#xC218;: &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC870;&#xAC01;&#xB0B4;&#xAE30;</h1>
+<p>&#xD2B9;&#xC815; &#xAE30;&#xAC04;&#xC758; &#xD1B5;&#xACC4;&#xCE58;&#xB97C; &#xACC4;&#xC0B0;&#xD558;&#xAE30; &#xC774;&#xC804;&#xC5D0; &#xD568;&#xC218;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xAC04;&#xB2E8;&#xD788; &#xC9DA;&#xACE0; &#xB118;&#xC5B4;&#xAC00;&#xACA0;&#xB2E4;. &#xC9C0;&#xAE08;&#xAE4C;&#xC9C0; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xB294; &#xAE38;&#xC5B4;&#xC57C; 50&#xC904; &#xC815;&#xB3C4; &#xC600;&#xB294;&#xB370;, &#xCF54;&#xB4DC;&#xAC00; &#xB354; &#xAE38;&#xC5B4;&#xC9C0;&#xBA74; &#xC77D;&#xACE0; &#xC774;&#xD574;&#xD558;&#xAE30;&#xAC00; &#xC810;&#xC810; &#xC5B4;&#xB824;&#xC6CC;&#xC9C4;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC5D0;&#xC11C;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xD2B9;&#xC815; &#xAE30;&#xB2A5; &#xD639;&#xC740; &#xD2B9;&#xC131;&#xBCC4;&#xB85C; &#xC870;&#xAC01;&#xC744; &#xB0B4;&#xACE0; &#xADF8; &#xC870;&#xAC01;&#xC744; &#xC870;&#xB9BD;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD55C;&#xB2E4;. &#xC774;&#xBBF8; &#xC5EC;&#xB7EC;&#xBC88; &#xC0AC;&#xC6A9;&#xD55C; <code>print()</code>, <code>open()</code>, <code>format()</code>&#xACFC; &#xAC19;&#xC740; &#xD568;&#xC218;&#xB4E4;&#xC744; &#xC0DD;&#xAC01;&#xD574;&#xBCF4;&#xC790;. &#xAC01;&#xAC01; &#xD568;&#xC218; &#xB0B4;&#xBD80;&#xC5D0;&#xC11C;&#xB294; &#xAD49;&#xC7A5;&#xD788; &#xBCF5;&#xC7A1;&#xD55C; &#xACC4;&#xC0B0;&#xACFC;&#xC815;&#xC774; &#xC774;&#xB8E8;&#xC5B4;&#xC9C0;&#xACE0;, &#xBCF5;&#xC7A1;&#xD55C; &#xCF54;&#xB4DC;&#xB85C; &#xC791;&#xC131;&#xB418;&#xC5B4; &#xC788;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xADF8; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xADF8; &#xB0B4;&#xBD80;&#xB97C; &#xC804;&#xD600; &#xC54C; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC774;, &#xCD9C;&#xB825;&#xD558;&#xAE30; &#xC704;&#xD574;, &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xAE30; &#xC704;&#xD574;, &#xCD9C;&#xB825;&#xD615;&#xC2DD;&#xC744; &#xC9C0;&#xC815;&#xD574;&#xC8FC;&#xAE30; &#xC704;&#xD574; &#xADF8;&#xC800; &#xC0AC;&#xC6A9;&#xD560; &#xBFD0;&#xC774;&#xB2E4;.</p>
+<p>&#xAC19;&#xC740; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC6B0;&#xB9AC;&#xAC00; &#xC791;&#xC131;&#xD558;&#xB294; &#xCF54;&#xB4DC;&#xB3C4; &#xD568;&#xC218;&#xB85C; &#xCABC;&#xAC1C;&#xC5B4;&#xC11C; &#xC0DD;&#xAC01;&#xD558;&#xBA74;, &#xCABC;&#xAC1C;&#xC9C4; &#xC870;&#xAC01;&#xC5D0;&#xB9CC; &#xC9D1;&#xC911;&#xD558;&#xC5EC; &#xAC1C;&#xBC1C;&#xD560; &#xC218; &#xC788;&#xACE0;, &#xC870;&#xAC01;&#xB4E4;&#xC774; &#xC644;&#xC131;&#xB418;&#xBA74; &#xADF8; &#xC870;&#xAC01;&#xC744; &#xD569;&#xCCD0;&#xC11C; &#xC804;&#xCCB4; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC644;&#xC131;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</p>
+<h2 id="&#xD568;&#xC218;&#xC758;-&#xAE30;&#xBCF8;-&#xD615;&#xC2DD;">&#xD568;&#xC218;&#xC758; &#xAE30;&#xBCF8; &#xD615;&#xC2DD;</h2>
+<p>&#xD568;&#xC218;&#xB294; <code>def</code> &#xB77C;&#xB294; &#xD0A4;&#xC6CC;&#xB4DC;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xAD6C;&#xBB38;&#xC73C;&#xB85C; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB97C; &#xBC1B;&#xC544;&#xC11C;, &#xACC4;&#xC0B0;&#xD55C; &#xD6C4;, &#xACC4;&#xC0B0; &#xACB0;&#xACFC;&#xB97C; &#xB3CC;&#xB824;&#xC8FC;&#xB294; &#xAD6C;&#xC870;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4;&#xB2E4;. &#xC785;&#xB825;&#xAC12;&#xC73C;&#xB85C; &#xBC1B;&#xB294; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC640; &#xACC4;&#xC0B0;&#xACB0;&#xACFC;&#xB85C; &#xB3CC;&#xB824;&#xC8FC;&#xB294; &#xB9AC;&#xD134;&#xAC12; &#xBAA8;&#xB450; &#xC0DD;&#xB7B5; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> &#xD568;&#xC218;&#xC774;&#xB984;<span class="hljs-params">(&#xBCC0;&#xC218;<span class="hljs-number">1</span>, &#xBCC0;&#xC218;<span class="hljs-number">2</span>)</span>:</span>
+    &#xACC4;&#xC0B0;
+    &#xACC4;&#xC0B0;
+    <span class="hljs-keyword">return</span> &#xACC4;&#xC0B0;&#xACB0;&#xACFC;
+</code></pre>
+<p>&#xC704;&#xC640; &#xAC19;&#xC740; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C0;&#xBBC0;&#xB85C; &#xAC04;&#xB2E8;&#xD788; &#xB208;&#xC5D0; &#xC775;&#xD788;&#xACE0;, &#xC774;&#xC804;&#xC5D0; &#xC791;&#xC131;&#xD588;&#xB358; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC218;&#xC815;&#xD574;&#xBCF4;&#xC790;.</p>
+<h2 id="&#xC5EC;&#xB7EC;&#xAC1C;-&#xD30C;&#xC77C;-&#xC77D;&#xACE0;-&#xC4F0;&#xB294;-&#xC791;&#xC5C5;&#xC744;-&#xCABC;&#xAC1C;&#xC790;">&#xC5EC;&#xB7EC;&#xAC1C; &#xD30C;&#xC77C; &#xC77D;&#xACE0; &#xC4F0;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xCABC;&#xAC1C;&#xC790;</h2>
+<p>&#xAC00;&#xC7A5; &#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xD588;&#xB358; &#xCF54;&#xB4DC;&#xB97C; &#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xCABC;&#xAC1C;&#xAE30;&#xB97C; &#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;. &#xD30C;&#xC77C; &#xC77D;&#xAE30;&#xC640; &#xD30C;&#xC77C; &#xC4F0;&#xAE30; &#xBD80;&#xBD84;&#xC744; &#xD568;&#xC218;&#xB85C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB2E4;. &#xADF8;&#xB807;&#xAC8C; &#xACE0;&#xCE58;&#xACE0; &#xB098;&#xBA74;, &#xC5EC;&#xB7EC;&#xAC1C;&#xC758; &#xCE21;&#xD6C4;&#xC18C;&#xB97C; &#xBC18;&#xBCF5;&#xD574;&#xC11C; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xBD80;&#xBD84;(<code>for station_id in station_ids:</code> &#xBD80;&#xBD84;)&#xC758; &#xCF54;&#xB4DC;&#xAC00; &#xAD49;&#xC7A5;&#xD788; &#xC77D;&#xAE30; &#xD3B8;&#xD558;&#xAC8C; &#xB41C; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xD568;&#xC218;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C; &#xBCC0;&#xC218;&#xBA85;&#xC740; &#xD574;&#xB2F9; &#xD568;&#xC218; &#xBD80;&#xBD84;&#xC5D0;&#xC11C;&#xB9CC; &#xC720;&#xD6A8;&#xD558;&#xBBC0;&#xB85C;, &#xAC19;&#xC740; &#xC774;&#xB984;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xB2E4;&#xB978; &#xAC12;&#xC774; &#xB420; &#xC218; &#xC788;&#xACE0;, <code>write_file</code> &#xD568;&#xC218;&#xC5D0;&#xC11C; <code>output_filename</code> &#xB300;&#xC2E0; <code>filename</code>&#xC73C;&#xB85C; &#xB2E4;&#xB978; &#xC774;&#xB984;&#xC744; &#xC4F8; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<p>&#xD568;&#xC218;&#xB294; &#xD638;&#xCD9C;&#xD558;&#xAE30; &#xC804;&#xAE4C;&#xC9C0;&#xB294; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xB294; &#xC810;&#xC740; &#xC8FC;&#xC758;&#xD558;&#xC790;. &#xC9C0;&#xAE08;&#xAE4C;&#xC9C0;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xAC00;&#xC7A5; &#xCCAB;&#xC904;&#xBD80;&#xD130; &#xB9C8;&#xC9C0;&#xB9C9;&#xC904;&#xAE4C;&#xC9C0; &#xCC28;&#xB840;&#xB300;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xC5C8;&#xC9C0;&#xB9CC;, &#xD568;&#xC218;&#xB85C; &#xC4F4; &#xCF54;&#xB4DC;&#xB294; &#xD638;&#xCD9C;&#xB418;&#xAE30; &#xC804;&#xAE4C;&#xC9C0; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. &#xC989; &#xC774; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xC2E4;&#xC81C;&#xB85C; &#xC2E4;&#xD589;&#xC774; &#xC2DC;&#xC791;&#xB418;&#xB294; &#xBD80;&#xBD84;&#xC740; <code>station_ids = [90, 95]</code> &#xCF54;&#xB4DC;&#xBD80;&#xD130;&#xB77C;&#xACE0; &#xC0DD;&#xAC01;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read_dataset</span><span class="hljs-params">(filename)</span>:</span>
+    dataset_list = []
+
+    <span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> line.split():
+                <span class="hljs-keyword">continue</span>
+            tokens = line.split()
+            year = int(tokens[<span class="hljs-number">0</span>])
+            month = int(tokens[<span class="hljs-number">1</span>])
+            day = int(tokens[<span class="hljs-number">2</span>])
+            tavg = float(tokens[<span class="hljs-number">4</span>])
+            kelvin = tavg + <span class="hljs-number">273.15</span>
+
+            dataset_list.append([year, month, day, tavg, kelvin])
+    <span class="hljs-keyword">return</span> dataset_list
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_file</span><span class="hljs-params">(filename, dataset)</span>:</span>
+    <span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">&quot;w&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8-sig&quot;</span>) <span class="hljs-keyword">as</span> f:
+        f.write(<span class="hljs-string">&quot;&#xC5F0;, &#xC6D4;, &#xC77C;, &#xD3C9;&#xADE0;&#xC628;&#xB3C4;(C), &#xD3C9;&#xADE0;&#xC628;&#xB3C4;(K)\n&quot;</span>)
+        <span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> dataset:
+            f.write(<span class="hljs-string">&quot;{}, {}, {}, {:.1f}, {:.2f}\n&quot;</span>.format(data[<span class="hljs-number">0</span>], data[<span class="hljs-number">1</span>], data[<span class="hljs-number">2</span>], data[<span class="hljs-number">3</span>], data[<span class="hljs-number">4</span>]))
+
+
+station_ids = [<span class="hljs-number">90</span>, <span class="hljs-number">95</span>]
+
+<span class="hljs-keyword">for</span> station_id <span class="hljs-keyword">in</span> station_ids:
+    filename = <span class="hljs-string">&quot;../data/&quot;</span> + str(station_id) + <span class="hljs-string">&quot;.txt&quot;</span>
+    output_filename = <span class="hljs-string">&quot;{}_kelvin.csv&quot;</span>.format(station_id)
+
+    dataset = read_dataset(filename)
+    write_file(output_filename, dataset)
+</code></pre>
+<h2 id="&#xBA54;&#xC778;&#xD568;&#xC218;">&#xBA54;&#xC778;&#xD568;&#xC218;</h2>
+<p>&#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xBA74;, &#xAC00;&#xC7A5; &#xBA3C;&#xC800; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0;&#xAC8C; &#xC54C;&#xB824;&#xC8FC;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;. &#xB300;&#xBD80;&#xBD84;&#xC758; &#xC5B8;&#xC5B4;&#xAC00; &#xACF5;&#xD1B5;&#xC801;&#xC73C;&#xB85C; <code>main</code> &#xD568;&#xC218;&#xB77C;&#xACE0; &#xBD80;&#xB978;&#xB2E4;. &#xD30C;&#xC774;&#xC36C;&#xC5D0;&#xC11C;&#xB294; &#xBA54;&#xC778;&#xD568;&#xC218;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xBD80;&#xBD84;&#xC774; &#xB2E4;&#xC18C; &#xC774;&#xC0C1;&#xD55C;&#xB370;, &#xBCF5;&#xC0AC;&#xD574;&#xC11C; &#xC4F0;&#xBA74;&#xB418;&#xBBC0;&#xB85C;, &#xAD73;&#xC774; &#xC678;&#xC6B8; &#xD544;&#xC694;&#xB294; &#xC5C6;&#xB2E4;.</p>
+<p>&#xC55E;&#xC11C; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xC5D0; &#xBA54;&#xC778;&#xD568;&#xC218;&#xAE4C;&#xC9C0; &#xB123;&#xC5B4;&#xC11C; &#xC791;&#xC131;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xCF54;&#xB4DC;&#xAC00; &#xB41C;&#xB2E4;. &#xC911;&#xBCF5;&#xB41C; &#xCF54;&#xB4DC;&#xB85C; &#xC55E;&#xC11C; &#xC791;&#xC131;&#xD55C; &#xB450; &#xD568;&#xC218;&#xC758; &#xB0B4;&#xC6A9;&#xC740; &#xC0DD;&#xB7B5;&#xD558;&#xC600;&#xB2E4;. (&#xBC11;&#xC5D0; &#xCF54;&#xB4DC;&#xB97C; &#xB611;&#xAC19;&#xC774; &#xD0C0;&#xC774;&#xD551;&#xD558;&#xACE0; &#xC5D0;&#xB7EC;&#xB09C;&#xB2E4;&#xACE0; &#xD558;&#xC2DC;&#xBA74; &#xC548;&#xB41C;&#xB2E4;.)</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read_dataset</span><span class="hljs-params">(filename)</span>:</span>
+    ...
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_file</span><span class="hljs-params">(filename, dataset)</span>:</span>
+    ...
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    station_ids = [<span class="hljs-number">90</span>, <span class="hljs-number">95</span>]
+
+    <span class="hljs-keyword">for</span> station_id <span class="hljs-keyword">in</span> station_ids:
+        filename = <span class="hljs-string">&quot;../data/&quot;</span> + str(station_id) + <span class="hljs-string">&quot;.txt&quot;</span>
+        output_filename = <span class="hljs-string">&quot;{}_kelvin.csv&quot;</span>.format(station_id)
+
+        dataset = read_dataset(filename)
+        write_file(output_filename, dataset)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    main()
+</code></pre>
+<p>&#xC55E;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xD558;&#xB294; &#xCF54;&#xB4DC;&#xB294; &#xC774;&#xB7F0; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xD558;&#xBA74; &#xC88B;&#xACA0;&#xB2E4;. &#xC55E;&#xC11C; &#xC124;&#xBA85;&#xD558;&#xC600;&#xB4EF;&#xC774; &#xBAA8;&#xB4E0; &#xCF54;&#xB4DC;&#xAC00; &#xD568;&#xC218;&#xB85C; &#xC815;&#xC758;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBBC0;&#xB85C;, &#xC2E4;&#xC81C;&#xB85C; &#xAD6C;&#xB3D9;&#xB418;&#xB294; &#xCF54;&#xB4DC;&#xB294; <code>if __name__ == &quot;__main__&quot;:</code> &#xAD6C;&#xBB38;&#xBD80;&#xD130; &#xC2E4;&#xD589;&#xC774; &#xB418;&#xACE0;, &#xD574;&#xB2F9; &#xAD6C;&#xBB38;&#xC5D0;&#xC11C; <code>main()</code> &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xADF8; &#xC548;&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xD568;&#xC218;&#xB4E4;&#xC744; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xAD6C;&#xB3D9;&#xB41C;&#xB2E4;.</p>
+<p>&#xC870;&#xAE08; &#xB354; &#xCABC;&#xAC1C;&#xAE30;&#xB97C; &#xD558;&#xC790;&#xBA74;, &#xACB0;&#xAD6D; &#xBA54;&#xC778;&#xD568;&#xC218;&#xC758; &#xCF54;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xD615;&#xD0DC;&#xAC00; &#xB420; &#xAC83;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    station_ids = [<span class="hljs-number">90</span>, <span class="hljs-number">95</span>]
+
+    <span class="hljs-keyword">for</span> station_id <span class="hljs-keyword">in</span> station_ids:
+        read_write_file(station_id)
+</code></pre>
+<p>&#xD639;&#xC740; </p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    station_ids = [<span class="hljs-number">90</span>, <span class="hljs-number">95</span>]
+
+    read_write_files(station_ids)
+</code></pre>
+<p>&#xAC19;&#xC740; &#xCF54;&#xB4DC;&#xAC00; &#xB420; &#xAC83;&#xC774;&#xB2E4;. &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC740; &#xC774;&#xB807;&#xAC8C; &#xAC04;&#xB2E8;&#xD558;&#xB2E4;.</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xC5EC;&#xAE30;&#xC11C; &#xCE21;&#xD6C4;&#xC18C; &#xBC88;&#xD638;&#xB97C; &#xB2E8;&#xC21C; &#xC785;&#xB825;&#xD558;&#xB77C;&#xACE0; &#xD588;&#xB294;&#xB370;, &#xC774; &#xBD80;&#xBD84;&#xB3C4; &#xD568;&#xC218;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C;, &#xD568;&#xC218;&#xB97C; &#xAC1C;&#xC120;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_station_ids</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> [<span class="hljs-number">90</span>, <span class="hljs-number">95</span>]
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    station_ids = get_station_ids()
+
+    read_write_files(station_ids)
+</code></pre>
+<p>&#xC774;&#xB7F0; &#xCF54;&#xB4DC;&#xAC00; &#xB420; &#xD150;&#xB370;, <code>get_station_ids()</code> &#xD568;&#xC218;&#xC5D0;&#xC11C; <code>os.walk</code> &#xD639;&#xC740; <code>glob</code> &#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC804;&#xCCB4;&#xD30C;&#xC77C;&#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xAC00;&#xC838; &#xC640;&#xC11C; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC8FC;&#xC5B4;&#xB3C4; &#xB41C;&#xB2E4;. &#xC774; &#xACBD;&#xC6B0;, &#xD30C;&#xC77C;&#xC744; &#xC77D;&#xACE0; &#xC4F0;&#xB294; &#xAC83;&#xC744; &#xACE0;&#xBBFC;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xB2E4;. <code>[90, 95]</code>&#xC640; &#xAC19;&#xC740; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC798; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC5D0;&#xB9CC; &#xC9D1;&#xC911;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch06-handling-files.html" class="navigation navigation-prev " aria-label="Previous page: 6장 여러 파일 다루기">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch08-statistics.html" class="navigation navigation-next " aria-label="Next page: 8장 연도별 통계">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7장 함수: 프로그램 조각내기","level":"1.9","depth":1,"next":{"title":"8장 연도별 통계","level":"1.10","depth":1,"path":"ch08-statistics.md","ref":"ch08-statistics.md","articles":[]},"previous":{"title":"6장 여러 파일 다루기","level":"1.8","depth":1,"path":"ch06-handling-files.md","ref":"ch06-handling-files.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch07-function.md","mtime":"2019-01-23T09:32:23.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-08T10:12:08.512Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
