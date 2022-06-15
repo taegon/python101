@@ -10,10 +10,8 @@ exports.Lecture = [
     'ch08-statistics',
     'ch09-monthly-statistics',
     'ch10-GIS-table',
-    'ch80-download-weather'
 ]
 
 exports.Appendix = [
-    'ch00-prologue',
     'ch80-download-weather'
 ]

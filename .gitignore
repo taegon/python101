@@ -1,3 +1,5 @@
 
 _book/
 _publish/
+node_modules
+docs/.vuepress/dist
