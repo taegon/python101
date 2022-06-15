@@ -41,7 +41,7 @@ IDE라 함은 통합 개발 환경(Integrated Development Environment)라 하여
 ## 깃허브 클라이언트 프로그램 (옵션)
 
 * TLDR
-  * [GitKraken](https://www.gitkraken.com/)을 설치하자.
-  * [GitHub Desktop](https://desktop.github.com/), [SourceTree](https://www.sourcetreeapp.com/)를 받아도 되나, 본 자료에서는 GitKraken를 중심으로 설명한다.
+  * [Fork](https://git-fork.com/)을 설치하자.
+  * [GitHub Desktop](https://desktop.github.com/), [SourceTree](https://www.sourcetreeapp.com/)를 받아도 되나, 본 자료에서는 Fork 앱을 중심으로 설명한다.
 
 깃허브 클라이언트 프로그램을 이용하면, 소스 변경 이력을 쉽게 확인할 수 있고, 소스코드를 내려받거나(pull), 수정한 소스코드를 저장소로 올리는(push) 작업이 수월하다.
