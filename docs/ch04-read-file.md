@@ -58,7 +58,7 @@ with open(filename, "r") as f:
 
 ```python
 BASE_DIR = "c:/code/python101/"
-filename = BASE_DIR + "data/90.txt"
+filename = os.path.join(BASE_DIR, "data/90.txt")  # BASE_DIR + "data/90.txt"라고 쓸 수도 있다.
 ```
 
 ## 변수에 할당하고 출력하기
